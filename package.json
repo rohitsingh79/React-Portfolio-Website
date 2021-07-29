@@ -8,7 +8,10 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scripts": "4.0.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "styled-components": "^5.3.0",
+    "react-intersection-observer": "8.31.0",
+    "@material-ui/core": "latest"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
