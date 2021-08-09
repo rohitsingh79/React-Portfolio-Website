@@ -7,7 +7,8 @@ import {
   RoundDiv,
   DivWrapper,
   Description,
-  GridContainer
+  GridContainer,
+  SvgContainer
 } from "./style";
 
 export default function App() {
@@ -34,11 +35,21 @@ export default function App() {
         </Description>
         <GridContainer>
           <div className="GridChild">
+            <SvgContainer>
+              <svg height="110" width="300">
+                <polygon
+                  points="50 3,100 28,100 75, 50 100,3 75,3 25"
+                  fill="#2c98f0"
+                  stroke-width="5"
+                />
+              </svg>
+            </SvgContainer>
+          </div>
+          <div className="GridChild">
             <svg height="110" width="300">
               <polygon
                 points="50 3,100 28,100 75, 50 100,3 75,3 25"
-                stroke="black"
-                fill="yellow"
+                fill="#f9bf3f"
                 stroke-width="5"
               />
             </svg>
@@ -47,18 +58,7 @@ export default function App() {
             <svg height="110" width="300">
               <polygon
                 points="50 3,100 28,100 75, 50 100,3 75,3 25"
-                stroke="black"
-                fill="yellow"
-                stroke-width="5"
-              />
-            </svg>
-          </div>
-          <div className="GridChild">
-            <svg height="110" width="300">
-              <polygon
-                points="50 3,100 28,100 75, 50 100,3 75,3 25"
-                stroke="black"
-                fill="yellow"
+                fill="#2fa499 "
                 stroke-width="5"
               />
             </svg>

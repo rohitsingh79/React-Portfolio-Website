@@ -65,4 +65,17 @@ const GridContainer = styled.div`
   }
 `;
 
-export { Header, RoundDiv, DivWrapper, Description, GridContainer };
+const SvgContainer = styled.div`
+  margin-top: -150px;
+  left: 100px;
+  text-align: center;
+`;
+
+export {
+  Header,
+  RoundDiv,
+  DivWrapper,
+  Description,
+  GridContainer,
+  SvgContainer
+};
