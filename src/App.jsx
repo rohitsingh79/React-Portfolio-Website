@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 //import Button from "@material-ui/core/Button";
 // import PassImage from "../public/passport.jpeg";
+import Container from "./SvgContainer";
 
 import {
   Header,
@@ -36,32 +37,33 @@ export default function App() {
         <GridContainer>
           <div className="GridChild">
             <SvgContainer>
-              <svg height="110" width="300">
+              {/* <svg height="110" width="300">
                 <polygon
                   points="50 3,100 28,100 75, 50 100,3 75,3 25"
                   fill="#2c98f0"
                   stroke-width="5"
                 />
-              </svg>
+              </svg> */}
             </SvgContainer>
           </div>
           <div className="GridChild">
-            <svg height="110" width="300">
+            <Container />
+            {/* <svg height="110" width="300">
               <polygon
                 points="50 3,100 28,100 75, 50 100,3 75,3 25"
                 fill="#f9bf3f"
                 stroke-width="5"
               />
-            </svg>
+            </svg> */}
           </div>
           <div className="GridChild">
-            <svg height="110" width="300">
+            {/* <svg height="110" width="300">
               <polygon
                 points="50 3,100 28,100 75, 50 100,3 75,3 25"
                 fill="#2fa499 "
                 stroke-width="5"
               />
-            </svg>
+            </svg> */}
           </div>
         </GridContainer>
       </div>

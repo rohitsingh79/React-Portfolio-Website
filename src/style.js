@@ -59,9 +59,11 @@ const GridContainer = styled.div`
   margin-top: 10%;
   .GridChild {
     background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
