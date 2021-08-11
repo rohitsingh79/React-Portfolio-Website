@@ -5,7 +5,7 @@ const DivWrapper = styled.div`
   height: 100%;
   position: relative;
   text-align: center;
-  background-color: gray;
+  background-color: #fff;
 `;
 
 const Header = styled.div`
@@ -54,16 +54,18 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 50px;
-  background-color: #2196f3;
+
   padding: 50px;
   margin-top: 10%;
   .GridChild {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fff;
     padding: 120px 20px;
     font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 2px solid #2c98f0;
+    box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%);
   }
 `;
 
