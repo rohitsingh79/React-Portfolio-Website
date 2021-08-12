@@ -10,7 +10,7 @@ const svgContainer = (props) => {
         padding: "20px",
         width: "100px",
         height: "100px",
-        marginBottom: "240px",
+        marginBottom: "300px",
         position: "absolute",
         marginRight: "150x",
         display: "block"

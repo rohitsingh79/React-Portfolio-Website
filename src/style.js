@@ -2,13 +2,13 @@ import styled, { css } from "styled-components";
 
 const DivWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 300%;
   text-align: center;
   background-color: #fff;
+  position: absolute;
 `;
 
-const Header = styled.div`
+const HeaderSection = styled.div`
   width: 100%;
   height: 200px;
   padding: 20px;
@@ -46,7 +46,7 @@ const RoundDiv = styled.div`
       `};
 `;
 
-const Description = styled.div`
+const DescriptionSection = styled.div`
   margin-top: 120px;
 `;
 
@@ -54,10 +54,11 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 50px;
-
   padding: 50px;
   margin-top: 10%;
   .GridChild {
+    width: 500px;
+    height: 50px;
     background-color: #fff;
     padding: 120px 20px;
     font-size: 30px;
@@ -76,10 +77,10 @@ const SvgContainer = styled.div`
 `;
 
 export {
-  Header,
+  HeaderSection,
   RoundDiv,
   DivWrapper,
-  Description,
+  DescriptionSection,
   GridContainer,
   SvgContainer
 };
