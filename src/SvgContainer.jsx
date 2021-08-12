@@ -1,6 +1,4 @@
-import { TextareaAutosize } from "@material-ui/core";
-import { yellow } from "@material-ui/core/colors";
-import React, { useState } from "react";
+import React from "react";
 
 const svgContainer = (props) => {
   const colorCode = props.color;
