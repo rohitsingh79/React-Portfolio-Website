@@ -53,20 +53,31 @@ const DescriptionSection = styled.div`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 50px;
-  padding: 50px;
+  grid-gap: 35px;
+  padding-left: 50px;
   margin-top: 10%;
+  width: auto;
+  /* background-color: #2196F3; */
   .GridChild {
-    width: 500px;
-    height: 50px;
     background-color: #fff;
+    box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%);
+    width: 415px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #2c98f0;
+
+    /* width: 480px;
+    height: 50px; */
+    /* background-color: #fff;
     padding: 120px 20px;
     font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid #2c98f0;
-    box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%);
+    /* box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%); */
   }
 `;
 

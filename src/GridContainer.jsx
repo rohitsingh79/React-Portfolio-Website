@@ -18,13 +18,21 @@ const GridBox = () => {
       <div className="GridChild">
         <SvgContainer color="#f9bf3f" />
         <div>
-          <p>Automnation Testing</p>
+          <h3>Automation Testing</h3>
+          <p>
+            I have experience building websites and chrome extentions using
+            JavaScipt
+          </p>
         </div>
       </div>
       <div className="GridChild">
         <SvgContainer color="#2fa499" />
         <div>
-          <p>Devops</p>
+          <h3>Devops</h3>
+          <p>
+            I have experience building websites and chrome extentions using
+            JavaScipt
+          </p>
         </div>
       </div>
     </GridContainer>
