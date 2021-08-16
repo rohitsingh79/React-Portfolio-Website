@@ -2,7 +2,7 @@ import React from "react";
 import GridBox from "./GridContainer";
 import Header from "./Header";
 import Description from "./Description";
-
+import TimeLine from "./TimeLine";
 import { DivWrapper } from "./style";
 
 export default function App() {
@@ -12,6 +12,7 @@ export default function App() {
         <Header />
         <Description />
         <GridBox />
+        <TimeLine />
       </div>
     </DivWrapper>
   );

@@ -2,10 +2,10 @@ import React from "react";
 import SvgContainer from "./SvgContainer";
 import { GridContainer } from "./style";
 
-const GridBox = () => {
+const GridBox = (props) => {
   return (
-    <GridContainer>
-      <div className="GridChild">
+    <GridContainer bottomBorderColor={props.bottomBorderColor}>
+      <div className="GridChild" style={{ borderBottom: "2px solid #2c98f0" }}>
         <SvgContainer color="#2c98f0" />
         <div>
           <h3>Web Development</h3>
@@ -15,7 +15,7 @@ const GridBox = () => {
           </p>
         </div>
       </div>
-      <div className="GridChild">
+      <div className="GridChild" style={{ borderBottom: "2px solid #f9bf3f" }}>
         <SvgContainer color="#f9bf3f" />
         <div>
           <h3>Automation Testing</h3>
@@ -25,7 +25,7 @@ const GridBox = () => {
           </p>
         </div>
       </div>
-      <div className="GridChild">
+      <div className="GridChild" style={{ borderBottom: "2px solid #2fa499" }}>
         <SvgContainer color="#2fa499" />
         <div>
           <h3>Devops</h3>

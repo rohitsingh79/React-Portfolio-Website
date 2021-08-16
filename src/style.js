@@ -66,18 +66,6 @@ const GridContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #2c98f0;
-
-    /* width: 480px;
-    height: 50px; */
-    /* background-color: #fff;
-    padding: 120px 20px;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid #2c98f0;
-    /* box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%); */
   }
 `;
 
@@ -86,6 +74,21 @@ const SvgContainer = styled.div`
   left: 100px;
   text-align: center;
 `;
+const TimeLineWrapper = styled.div`
+  display: grid;
+  margin-top: 100px;
+  grid-template-rows: 150px 150px;
+  grid-gap: 10px;
+  padding: 40px;
+
+  .TimelineChild {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    font-size: 15px;
+    background-color: #f2f3f7;
+    width: 1250px;
+  }
+`;
 
 export {
   HeaderSection,
@@ -93,5 +96,6 @@ export {
   DivWrapper,
   DescriptionSection,
   GridContainer,
-  SvgContainer
+  SvgContainer,
+  TimeLineWrapper
 };
