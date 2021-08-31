@@ -4,7 +4,7 @@ import { TimeLineWrapper } from "./style";
 const TimeLine = () => {
   return (
     <TimeLineWrapper>
-      <div className="TimelineChild">
+      <div className="TimeLineChild">
         <h3 style={{ paddingLeft: "20px" }}>
           Internship at Juniper 2019-present
         </h3>
@@ -20,7 +20,7 @@ const TimeLine = () => {
         </p>
       </div>
 
-      <div className="TimelineChild">
+      <div className="TimeLineChild">
         <h3 style={{ paddingLeft: "20px" }}>
           Internship at Juniper 2019-present
         </h3>
@@ -36,7 +36,7 @@ const TimeLine = () => {
         </p>
       </div>
 
-      <div className="TimelineChild">
+      <div className="TimeLineChild">
         <h3 style={{ paddingLeft: "20px" }}>
           Internship at Juniper 2019-present
         </h3>
