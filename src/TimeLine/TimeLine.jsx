@@ -1,9 +1,12 @@
 import React from "react";
+import SvgIcon from "./SvgIcon";
+
 import {
   TimeLineWrapper,
   ColumnWrapper,
   ColumnContainer,
-  TimeLineBar
+  TimeLineBar,
+  TimeLineChild
 } from "./style";
 
 const TimeLine = () => {
@@ -12,7 +15,8 @@ const TimeLine = () => {
       <ColumnContainer>
         <TimeLineBar />
         <TimeLineWrapper>
-          <div className="TimeLineChild childHeight">
+          <TimeLineChild backgroundColor={"#f9bf3f"}>
+            <SvgIcon />
             <h3 style={{ paddingLeft: "20px" }}>
               Internship at Juniper 2019-present
             </h3>
@@ -26,9 +30,10 @@ const TimeLine = () => {
               container-orchrastation technologies like K8s, Swarm to create
               industry standard production environments.
             </p>
-          </div>
+          </TimeLineChild>
 
-          <div className="TimeLineChild">
+          <TimeLineChild backgroundColor={"#a84cb8"}>
+            <SvgIcon />
             <h3 style={{ paddingLeft: "20px" }}>
               Internship at Juniper 2019-present
             </h3>
@@ -42,9 +47,10 @@ const TimeLine = () => {
               container-orchrastation technologies like K8s, Swarm to create
               industry standard production environments.
             </p>
-          </div>
+          </TimeLineChild>
 
-          <div className="TimeLineChild">
+          <TimeLineChild backgroundColor={"#2fa499"}>
+            <SvgIcon />
             <h3 style={{ paddingLeft: "20px" }}>
               Internship at Juniper 2019-present
             </h3>
@@ -58,7 +64,7 @@ const TimeLine = () => {
               container-orchrastation technologies like K8s, Swarm to create
               industry standard production environments.
             </p>
-          </div>
+          </TimeLineChild>
         </TimeLineWrapper>
       </ColumnContainer>
     </ColumnWrapper>
