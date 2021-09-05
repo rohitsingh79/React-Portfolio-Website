@@ -10,9 +10,9 @@ const DivWrapper = styled.div`
 
 const HeaderSection = styled.div`
   width: 100%;
-  height: 200px;
+  height: 800px;
   padding: 20px;
-  background-color: #008b8b;
+  /* background-color: #008b8b; */
   position: relative;
   text-align: center;
   justify-content: center;
@@ -32,7 +32,7 @@ const RoundDiv = styled.div`
   background-color: MediumSeaGreen;
   border-radius: 50%;
   position: absolute;
-  top: 55%;
+  top: 80%;
   left: 42%;
   padding-top: ${(props) => props.topPadding}px;
 
