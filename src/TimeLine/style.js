@@ -13,6 +13,7 @@ const ColumnContainer = styled.div`
   grid-gap: 40px;
   padding: 40px;
   height: 450px;
+  margin-left: 20%;
 `;
 
 const TimeLineBar = styled.div`
