@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const DivWrapper = styled.div`
   width: 100%;
-  height: 300%;
+  height: 200%;
   text-align: center;
   background-color: #fff;
   position: absolute;
@@ -10,8 +10,8 @@ const DivWrapper = styled.div`
 
 const HeaderSection = styled.div`
   width: 100%;
-  height: 800px;
-  padding: 20px;
+  height: 500px;
+  /* padding: 20px; */
   /* background-color: #008b8b; */
   position: relative;
   text-align: center;
@@ -23,31 +23,8 @@ const HeaderSection = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
+    margin-left: "40px";
   }
-`;
-
-const RoundDiv = styled.div`
-  width: 200px;
-  height: 200px;
-  background-color: MediumSeaGreen;
-  border-radius: 50%;
-  position: absolute;
-  top: 80%;
-  left: 42%;
-  padding-top: ${(props) => props.topPadding}px;
-
-  ${({ hoverState }) =>
-    hoverState === true
-      ? css`
-          background-color: blue;
-        `
-      : css`
-      background-color:cyan: ;
-      `};
-`;
-
-const DescriptionSection = styled.div`
-  margin-top: 120px;
 `;
 
 const GridContainer = styled.div`
@@ -57,6 +34,7 @@ const GridContainer = styled.div`
   padding-left: 50px;
   margin-top: 10%;
   width: auto;
+  margin-left: 20%;
   /* background-color: #2196F3; */
   .GridChild {
     background-color: #fff;
@@ -74,28 +52,5 @@ const SvgContainer = styled.div`
   left: 100px;
   text-align: center;
 `;
-// const TimeLineWrapper = styled.div`
-//   display: grid;
-//   margin-top: 100px;
-//   grid-template-rows: 150px 150px;
-//   grid-gap: 10px;
-//   padding: 40px;
 
-//   .TimelineChild {
-//     background-color: rgba(255, 255, 255, 0.8);
-//     text-align: left;
-//     font-size: 15px;
-//     background-color: #f2f3f7;
-//     width: 1250px;
-//   }
-// `;
-
-export {
-  HeaderSection,
-  RoundDiv,
-  DivWrapper,
-  DescriptionSection,
-  GridContainer,
-  SvgContainer
-  // TimeLineWrapper
-};
+export { HeaderSection, DivWrapper, GridContainer, SvgContainer };
