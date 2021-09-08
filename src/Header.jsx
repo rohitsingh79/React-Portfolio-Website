@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { HeaderSection } from "./style";
-import logo from "../public/georgie.jpg";
 
 const Header = () => {
   const [hoverState, setHoverState] = useState(false);

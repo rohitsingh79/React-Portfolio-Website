@@ -12,10 +12,11 @@ const HeaderSection = styled.div`
   width: 100%;
   height: 500px;
   /* padding: 20px; */
-  /* background-color: #008b8b; */
+  background-color: #008b8b;
   position: relative;
   text-align: center;
   justify-content: center;
+  margin-left: 20%;
 
   .headerText {
     text-align: center;

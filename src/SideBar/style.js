@@ -10,24 +10,14 @@ const SideBar = styled.div`
   overflow: scroll;
 `;
 
-const RoundDiv = styled.div`
+const RoundDivWrapper = styled.div`
   width: 150px;
   height: 150px;
-  background-color: MediumSeaGreen;
-  border-radius: 50%;
-  position: absolute;
-  top: 2%;
+  background-color: inherit;
+  position: relative;
   left: 20%;
-  padding-top: ${(props) => props.topPadding}px;
-
-  ${({ hoverState }) =>
-    hoverState === true
-      ? css`
-          background-color: blue;
-        `
-      : css`
-      background-color:cyan: ;
-      `};
+  top: 2%;
+  z-index: 1;
 `;
 
-export { SideBar, RoundDiv };
+export { SideBar, RoundDivWrapper };
