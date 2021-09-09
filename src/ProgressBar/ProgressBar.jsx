@@ -16,7 +16,7 @@ const ProgressBar = ({ done }) => {
   return (
     <ProgressContainer>
       <div className="progress-done" style={style}>
-        {done}%
+        
       </div>
     </ProgressContainer>
   );
