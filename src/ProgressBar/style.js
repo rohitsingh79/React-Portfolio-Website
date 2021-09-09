@@ -6,7 +6,8 @@ const ProgressContainer = styled.div`
   position: relative;
   margin: 15px 0;
   height: 10px;
-  width: 280px;
+  width: 240px;
+  margin-left: 10px;
   .progress-done {
     background: linear-gradient(to left, #f2709c, #ff9472);
     box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
@@ -23,4 +24,10 @@ const ProgressContainer = styled.div`
   }
 `;
 
-export { ProgressContainer };
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 240px 30px;
+  grid-gap: 22px;
+`;
+
+export { ProgressContainer, GridContainer };

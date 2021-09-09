@@ -70,13 +70,49 @@ const SideDrawer = () => {
       </div>
 
       {/* <MenuLinks>About Me</MenuLinks> */}
-      <div>Html</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "left",
+          justifyContent: "left",
+          marginLeft: "10px"
+        }}
+      >
+        Html
+      </div>
       <ProgressBar done={"70"} />
-      <div>css</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "left",
+          justifyContent: "left",
+          marginLeft: "10px"
+        }}
+      >
+        Css
+      </div>
       <ProgressBar done={"60"} />
-      <div>React</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "left",
+          justifyContent: "left",
+          marginLeft: "10px"
+        }}
+      >
+        React
+      </div>
       <ProgressBar done={"50"} />
-      <div>Javascript</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "left",
+          justifyContent: "left",
+          marginLeft: "10px"
+        }}
+      >
+        Javascript
+      </div>
       <ProgressBar done={"90"} />
     </SideBar>
   );

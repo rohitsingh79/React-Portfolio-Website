@@ -1,5 +1,6 @@
+import { size } from "lodash";
 import React, { useState } from "react";
-import { ProgressContainer } from "./style";
+import { ProgressContainer, GridContainer } from "./style";
 
 const ProgressBar = ({ done }) => {
   const [style, setStyle] = useState({});
@@ -11,14 +12,24 @@ const ProgressBar = ({ done }) => {
     };
 
     setStyle(newStyle);
-  }, 200);
+  }, 100);
 
   return (
-    <ProgressContainer>
-      <div className="progress-done" style={style}>
-        
+    <GridContainer>
+      <ProgressContainer>
+        <div className="progress-done" style={style}></div>
+      </ProgressContainer>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "15px"
+        }}
+      >
+        {done}%
       </div>
-    </ProgressContainer>
+    </GridContainer>
   );
 };
 
