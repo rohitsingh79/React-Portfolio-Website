@@ -1,6 +1,7 @@
 import { SideBar, RoundDivWrapper } from "./style";
 import Image from "../../public/Image.jpeg";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
 // import MenuLinks from "./MenuLinks/MenuLinks";
 
 const SideDrawer = () => {
@@ -75,7 +76,9 @@ const SideDrawer = () => {
           display: "flex",
           alignItems: "left",
           justifyContent: "left",
-          marginLeft: "10px"
+          marginLeft: "10px",
+          color: "rgba(0, 0, 0, 0.7)",
+          marginBottom: "-15px"
         }}
       >
         Html
@@ -86,7 +89,9 @@ const SideDrawer = () => {
           display: "flex",
           alignItems: "left",
           justifyContent: "left",
-          marginLeft: "10px"
+          marginLeft: "10px",
+          color: "rgba(0, 0, 0, 0.7)",
+          marginBottom: "-15px"
         }}
       >
         Css
@@ -97,7 +102,9 @@ const SideDrawer = () => {
           display: "flex",
           alignItems: "left",
           justifyContent: "left",
-          marginLeft: "10px"
+          marginLeft: "10px",
+          color: "rgba(0, 0, 0, 0.7)",
+          marginBottom: "-15px"
         }}
       >
         React
@@ -108,12 +115,18 @@ const SideDrawer = () => {
           display: "flex",
           alignItems: "left",
           justifyContent: "left",
-          marginLeft: "10px"
+          marginLeft: "10px",
+          color: "rgba(0, 0, 0, 0.7)",
+          marginBottom: "-15px"
         }}
       >
         Javascript
       </div>
       <ProgressBar done={"90"} />
+
+      <div style={{ marginTop: "30px" }}>
+        <CircleProgressBar />
+      </div>
     </SideBar>
   );
 };

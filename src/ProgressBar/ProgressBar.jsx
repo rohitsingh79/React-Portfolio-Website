@@ -1,18 +1,21 @@
-import { size } from "lodash";
+import { useEffect } from "react";
 import React, { useState } from "react";
 import { ProgressContainer, GridContainer } from "./style";
 
 const ProgressBar = ({ done }) => {
   const [style, setStyle] = useState({});
 
-  setTimeout(() => {
-    const newStyle = {
-      opacity: 1,
-      width: `${done}%`
-    };
+  useEffect(() => {
+    setTimeout(() => {
+      const newStyle = {
+        opacity: 1,
+        width: `${done}%`
+      };
 
-    setStyle(newStyle);
-  }, 100);
+      setStyle(newStyle);
+    }, 500);
+    console.log("on first render");
+  }, []);
 
   return (
     <GridContainer>
@@ -24,7 +27,8 @@ const ProgressBar = ({ done }) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontSize: "15px"
+          fontSize: "15px",
+          color: "rgba(0, 0, 0, 0.7)"
         }}
       >
         {done}%
