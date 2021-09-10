@@ -83,7 +83,7 @@ const SideDrawer = () => {
       >
         Html
       </div>
-      <ProgressBar done={"70"} />
+      <ProgressBar done={"10"} />
       <div
         style={{
           display: "flex",
@@ -124,8 +124,15 @@ const SideDrawer = () => {
       </div>
       <ProgressBar done={"90"} />
 
-      <div style={{ marginTop: "30px" }}>
-        <CircleProgressBar />
+      <div
+        style={{
+          marginTop: "30px",
+          display: "flex",
+          alignItems: "left",
+          justifyContent: "left"
+        }}
+      >
+        <CircleProgressBar done={"10"} />
       </div>
     </SideBar>
   );
