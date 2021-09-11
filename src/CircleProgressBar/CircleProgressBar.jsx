@@ -1,19 +1,14 @@
-import { GridContainer } from "./style";
+const CircleProgressBar = (props) => {
+  let num = props.done;
+  let per = 244 - (244 * num) / 100;
 
-const CircleProgressBar = ({ done }) => {
-  let num = done;
-  console.log(num);
-  let per = 200 - (200 * num) / 100;
-  console.log(per);
-
-  console.log(per);
-  const newStyle = {
+  const styledCircle = {
     fill: "none",
     strokeWidth: "10",
     stroke: "#000",
     transform: "translate(5px,5px)",
-    strokeDasharray: "200",
-    strokeDashoffset: "200",
+    strokeDasharray: "244",
+    strokeDashoffset: "244",
     strokeLinecap: "round"
   };
 
@@ -23,83 +18,53 @@ const CircleProgressBar = ({ done }) => {
   };
   const outerCircle = {
     strokeDashoffset: `${per}`,
-
     stroke: "url(#linear)"
+  };
+
+  const styledSvg = {
+    height: "100px",
+    width: "100px"
   };
 
   return (
     <>
-      <GridContainer>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        <svg style={styledSvg}>
+          <defs>
+            <linearGradient id={"linear"} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#f2709c" />
+              <stop offset="100%" stopColor="#ff9472" />
+            </linearGradient>
+          </defs>
+          <circle
+            style={{ ...styledCircle, ...innerCircle }}
+            cx="40"
+            cy="40"
+            r="40"
+          ></circle>
+          <circle
+            style={{ ...styledCircle, ...outerCircle }}
+            cx="40"
+            cy="40"
+            r="40"
+          ></circle>
+        </svg>
         <div
           style={{
-            display: "flex",
-            flexDirection: "column"
+            position: "relative",
+            top: "-60px",
+            left: "-15px"
           }}
         >
-          <svg style={{ height: "70px", width: "70px" }}>
-            <defs>
-              <linearGradient id={"linear"} x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#f2709c" />
-                <stop offset="100%" stopColor="#ff9472" />
-              </linearGradient>
-            </defs>
-            <circle
-              style={{ ...newStyle, ...innerCircle }}
-              cx="30"
-              cy="30"
-              r="30"
-            ></circle>
-            <circle
-              style={{ ...newStyle, ...outerCircle }}
-              cx="30"
-              cy="30"
-              r="30"
-            ></circle>
-          </svg>
-          <div style={{ marginTop: "10px" }}>Communication </div>
+          {props.done}%
         </div>
-        <svg style={{ height: "70px", width: "70px" }}>
-          <defs>
-            <linearGradient id={"linear"} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#f2709c" />
-              <stop offset="100%" stopColor="#ff9472" />
-            </linearGradient>
-          </defs>
-          <circle
-            style={{ ...newStyle, ...innerCircle }}
-            cx="30"
-            cy="30"
-            r="30"
-          ></circle>
-          <circle
-            style={{ ...newStyle, ...outerCircle }}
-            cx="30"
-            cy="30"
-            r="30"
-          ></circle>
-        </svg>
-
-        <svg style={{ height: "70px", width: "70px" }}>
-          <defs>
-            <linearGradient id={"linear"} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#f2709c" />
-              <stop offset="100%" stopColor="#ff9472" />
-            </linearGradient>
-          </defs>
-          <circle
-            style={{ ...newStyle, ...innerCircle }}
-            cx="30"
-            cy="30"
-            r="30"
-          ></circle>
-          <circle
-            style={{ ...newStyle, ...outerCircle }}
-            cx="30"
-            cy="30"
-            r="30"
-          ></circle>
-        </svg>
-      </GridContainer>
+        <div style={{ marginTop: "-15px" }}>{props.skill} </div>
+      </div>
     </>
   );
 };
