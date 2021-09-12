@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import React, { useState } from "react";
 import { ProgressContainer, GridContainer } from "./style";
+import { transform } from "lodash";
 
 const ProgressBar = ({ done }) => {
   const [style, setStyle] = useState({});
@@ -28,7 +29,10 @@ const ProgressBar = ({ done }) => {
           alignItems: "center",
           justifyContent: "center",
           fontSize: "15px",
-          color: "rgba(0, 0, 0, 0.7)"
+          color: "rgba(0, 0, 0, 0.7)",
+          transform: "translate(-40px,-15px)",
+          "font-family": "'Roboto', sans-serif",
+          "font-size": "15px"
         }}
       >
         {done}%

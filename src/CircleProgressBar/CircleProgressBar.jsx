@@ -57,13 +57,26 @@ const CircleProgressBar = (props) => {
         <div
           style={{
             position: "relative",
-            top: "-60px",
-            left: "-15px"
+            top: "-55px",
+            left: "-15px",
+            "font-family": "'Roboto', sans-serif",
+            "font-size": "15x",
+            color: "rgba(0, 0, 0, 0.7)"
           }}
         >
           {props.done}%
         </div>
-        <div style={{ marginTop: "-15px" }}>{props.skill} </div>
+        <div
+          style={{
+            marginTop: "-10px",
+            "font-family": "'Roboto', sans-serif",
+            "font-size": "15x",
+            color: "rgba(0, 0, 0, 0.7)",
+            transform: "translate(-10px)"
+          }}
+        >
+          {props.skill}
+        </div>
       </div>
     </>
   );

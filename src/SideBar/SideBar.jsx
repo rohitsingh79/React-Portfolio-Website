@@ -1,10 +1,20 @@
-import { SideBar, RoundDivWrapper } from "./style";
-import Image from "../../public/Image.jpeg";
+import { SideBar, RoundDivWrapper, GridContainer } from "./style";
+import Image from "../../public/Rohit.jpg";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
 // import MenuLinks from "./MenuLinks/MenuLinks";
 
 const SideDrawer = () => {
+  const styledSkill = {
+    display: "flex",
+    alignItems: "left",
+    justifyContent: "left",
+    marginLeft: "30px",
+    color: "rgba(0, 0, 0, 0.7)",
+    marginBottom: "-15px",
+    "font-family": "'Roboto', sans-serif",
+    "font-size": "15px"
+  };
   return (
     <SideBar>
       <RoundDivWrapper>
@@ -14,7 +24,6 @@ const SideDrawer = () => {
           style={{
             height: "150px",
             width: "150px",
-            top: "2px",
             borderRadius: "50%"
           }}
         />
@@ -22,10 +31,9 @@ const SideDrawer = () => {
 
       <h1
         style={{
-          marginTop: "14%",
           fontWeight: "500",
           fontSize: "30px",
-          fontFamily: "Georgia, serif",
+          "font-family": "'Roboto', sans-serif",
           Width: "100%"
         }}
       >
@@ -34,7 +42,8 @@ const SideDrawer = () => {
       <div
         style={{
           height: "150px",
-          marginTop: "10%"
+          marginTop: "10%",
+          marginBottom: "5%"
         }}
       >
         <ul
@@ -45,7 +54,7 @@ const SideDrawer = () => {
         >
           <li
             style={{
-              padding: "10px",
+              "margin-bottom": "10px",
               color: "rgba(0, 0, 0, 0.7)"
             }}
           >
@@ -53,7 +62,7 @@ const SideDrawer = () => {
           </li>
           <li
             style={{
-              padding: "10px",
+              "margin-bottom": "10px",
               color: "rgba(0, 0, 0, 0.7)"
             }}
           >
@@ -61,7 +70,7 @@ const SideDrawer = () => {
           </li>
           <li
             style={{
-              padding: "10px",
+              "margin-bottom": "10px",
               color: "rgba(0, 0, 0, 0.7)"
             }}
           >
@@ -71,68 +80,31 @@ const SideDrawer = () => {
       </div>
 
       {/* <MenuLinks>About Me</MenuLinks> */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "left",
-          justifyContent: "left",
-          marginLeft: "10px",
-          color: "rgba(0, 0, 0, 0.7)",
-          marginBottom: "-15px"
-        }}
-      >
-        Html
+      <div style={{ position: "relative", top: "-60px" }}>
+        <hr
+          style={{
+            marginLeft: "20px",
+            marginRight: "20px",
+            marginBottom: "20px"
+          }}
+        />
+        <div style={styledSkill}>Html</div>
+        <ProgressBar done={"90"} />
+        <div style={styledSkill}>Css</div>
+        <ProgressBar done={"60"} />
+        <div style={styledSkill}>React</div>
+        <ProgressBar done={"50"} />
+        <div style={styledSkill}>Javascript</div>
+        <ProgressBar done={"90"} />
+        <hr style={{ margin: "20px 20px 10px 20px " }} />
       </div>
-      <ProgressBar done={"10"} />
-      <div
-        style={{
-          display: "flex",
-          alignItems: "left",
-          justifyContent: "left",
-          marginLeft: "10px",
-          color: "rgba(0, 0, 0, 0.7)",
-          marginBottom: "-15px"
-        }}
-      >
-        Css
-      </div>
-      <ProgressBar done={"60"} />
-      <div
-        style={{
-          display: "flex",
-          alignItems: "left",
-          justifyContent: "left",
-          marginLeft: "10px",
-          color: "rgba(0, 0, 0, 0.7)",
-          marginBottom: "-15px"
-        }}
-      >
-        React
-      </div>
-      <ProgressBar done={"50"} />
-      <div
-        style={{
-          display: "flex",
-          alignItems: "left",
-          justifyContent: "left",
-          marginLeft: "10px",
-          color: "rgba(0, 0, 0, 0.7)",
-          marginBottom: "-15px"
-        }}
-      >
-        Javascript
-      </div>
-      <ProgressBar done={"90"} />
-
-      <div
-        style={{
-          marginTop: "30px",
-          display: "flex",
-          alignItems: "left",
-          justifyContent: "left"
-        }}
-      >
-        <CircleProgressBar done={"10"} />
+      <div style={{ position: "relative", top: "-50px" }}>
+        <GridContainer>
+          <CircleProgressBar done={"80"} skill={"Communication"} />
+          <CircleProgressBar done={"70"} skill={"Problen Solving"} />
+          <CircleProgressBar done={"90"} skill={"Team Work"} />
+          <CircleProgressBar done={"85"} skill={"Flexibility"} />
+        </GridContainer>
       </div>
     </SideBar>
   );

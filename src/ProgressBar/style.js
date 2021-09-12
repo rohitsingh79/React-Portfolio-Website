@@ -21,7 +21,8 @@ const ProgressContainer = styled.div`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 240px 30px;
-  grid-gap: 22px;
+  grid-gap: 20px;
+  margin: 0 18px;
 `;
 
 export { ProgressContainer, GridContainer };

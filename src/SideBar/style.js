@@ -16,8 +16,17 @@ const RoundDivWrapper = styled.div`
   background-color: inherit;
   position: relative;
   left: 20%;
-  top: 2%;
+  top: 5px;
   z-index: 1;
 `;
 
-export { SideBar, RoundDivWrapper };
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 120px 120px;
+  grid-template-rows: 120px 120px;
+  grid-gap: 25px;
+  margin-left: 30px;
+  margin-right: 30px;
+`;
+
+export { SideBar, RoundDivWrapper, GridContainer };
