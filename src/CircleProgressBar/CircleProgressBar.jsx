@@ -18,7 +18,7 @@ const CircleProgressBar = (props) => {
   };
   const outerCircle = {
     strokeDashoffset: `${per}`,
-    stroke: "url(#linear)"
+    stroke: "url(#linear)",
   };
 
   const styledSvg = {

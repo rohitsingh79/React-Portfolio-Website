@@ -3,7 +3,6 @@ import SvgIcon from "./SvgIcon";
 
 import {
   TimeLineWrapper,
-  ColumnWrapper,
   ColumnContainer,
   TimeLineBar,
   TimeLineChild
@@ -11,7 +10,6 @@ import {
 
 const TimeLine = () => {
   return (
-    <ColumnWrapper>
       <ColumnContainer>
         <TimeLineBar />
         <TimeLineWrapper>
@@ -65,9 +63,8 @@ const TimeLine = () => {
               industry standard production environments.
             </p>
           </TimeLineChild>
-        </TimeLineWrapper>
+        </TimeLineWrapper> 
       </ColumnContainer>
-    </ColumnWrapper>
   );
 };
 

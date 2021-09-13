@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const DivWrapper = styled.div`
-  width: 100%;
+  width: 1320px;
   height: 200%;
   text-align: center;
   background-color: #fff;
@@ -11,12 +11,11 @@ const DivWrapper = styled.div`
 const HeaderSection = styled.div`
   width: 100%;
   height: 500px;
-  /* padding: 20px; */
   background-color: #008b8b;
   position: relative;
   text-align: center;
   justify-content: center;
-  margin-left: 20%;
+  margin-left: 24%;
 
   .headerText {
     text-align: center;
@@ -30,17 +29,14 @@ const HeaderSection = styled.div`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 35px;
-  padding-left: 50px;
+  grid-template-columns: 414px 414px 414px;
+  grid-gap: 30px;
   margin-top: 10%;
-  width: auto;
-  margin-left: 20%;
-  /* background-color: #2196F3; */
+  margin-left: 25%;
+
   .GridChild {
     background-color: #fff;
     box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%);
-    width: 415px;
     height: 230px;
     display: flex;
     align-items: center;

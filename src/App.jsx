@@ -7,13 +7,14 @@ import { DivWrapper } from "./style";
 
 export default function App() {
   return (
+    <div className="App">
     <DivWrapper>
       <SideDrawer />
-      <div className="App">
-        <Header />
+        {/* <Header /> */}
         <GridBox />
         <TimeLine />
+        </DivWrapper>
       </div>
-    </DivWrapper>
+    
   );
 }

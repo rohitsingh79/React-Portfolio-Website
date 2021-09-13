@@ -1,23 +1,19 @@
 import styled from "styled-components";
 
-const ColumnWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
 
 const ColumnContainer = styled.div`
   display: grid;
   margin-top: 100px;
-  margin-left: 40px;
-  grid-template-columns: 5px 1250px;
+  grid-template-columns: 6px 1250px;
   grid-gap: 40px;
-  padding: 40px;
-  height: 450px;
-  margin-left: 20%;
+  height: 620px;
+  width:1300px;
+  margin-left: 26%;
 `;
 
 const TimeLineBar = styled.div`
   background-color: #f2f3f7;
+  
 `;
 
 const TimeLineWrapper = styled.div`
@@ -61,7 +57,6 @@ const TimeLineChild = styled.div`
 
 export {
   TimeLineWrapper,
-  ColumnWrapper,
   ColumnContainer,
   TimeLineBar,
   TimeLineChild
