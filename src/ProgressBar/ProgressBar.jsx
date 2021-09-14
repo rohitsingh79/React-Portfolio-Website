@@ -15,7 +15,6 @@ const ProgressBar = ({ done }) => {
 
       setStyle(newStyle);
     }, 500);
-    console.log("on first render");
   }, []);
 
   return (
