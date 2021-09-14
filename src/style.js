@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import photographer from "../public/Hero.jpg";
 
 const DivWrapper = styled.div`
   width: 1320px;
@@ -21,8 +20,13 @@ const HeaderSection = styled.div`
     padding: 1rem;
     height: 50vh;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("Hero.jpg");
+
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1%,
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("tamanna.jpg");
     background-size: cover;
     background-position: center;
   }
