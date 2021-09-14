@@ -1,28 +1,19 @@
 import React, { useState } from "react";
 import { HeaderSection } from "./style";
-
+import logo from "../public/Hero.jpg";
 const Header = () => {
-  const [hoverState, setHoverState] = useState(false);
   return (
-    <HeaderSection className="headerText">
-      {/* <div
+    <HeaderSection>
+      <div
+        className="app-bg"
         style={{
-          position: "absolute",
-          top: "40px",
-          left: "300px",
-          "z-index": "1",
-          "font-size": "70px"
+          "--img":
+            "url('https://images.unsplash.com/photo-1610907083431-d36d8947c8e2')"
         }}
       >
-        Hello, Iam..
-        <br></br>
-        Rohit Pratap Singh
-      </div> */}
-      {/* <img
-        src={logo}
-        alt="Logo"
-        style={{ height: "800px", right: "-2px", position: "absolute" }}
-      /> */}
+        <h1>Hello, world!</h1>
+        <h2>It is {new Date().toLocaleTimeString()}.</h2>
+      </div>
     </HeaderSection>
   );
 };

@@ -32,26 +32,6 @@ const CircleProgressBar = (props) => {
     animation: ${pulse} 2s linear forwards;
   `;
 
-  // const styledCircle = {
-  //   fill: "none",
-  //   strokeWidth: "10",
-  //   stroke: "#000",
-  //   transform: "translate(5px,5px)",
-  //   strokeDasharray: "244",
-  //   strokeDashoffset: "244",
-  //   strokeLinecap: "round"
-  // };
-
-  // const innerCircle = {
-  //   strokeDashoffset: "0",
-  //   stroke: "#d8d8d8"
-  // };
-  // const outerCircle = {
-  //   strokeDashoffset: `${per}`,
-  //   stroke: "url(#linear)",
-  //   animation: "1s ease 0.3s"
-  // };
-
   const styledSvg = {
     height: "100px",
     width: "100px"

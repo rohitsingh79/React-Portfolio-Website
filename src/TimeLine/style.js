@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
-
 const ColumnContainer = styled.div`
   display: grid;
   margin-top: 100px;
-  grid-template-columns: 6px 1250px;
+  grid-template-columns: 6px 1224px;
   grid-gap: 40px;
   height: 620px;
-  width:1300px;
+  width: 1300px;
   margin-left: 26%;
 `;
 
 const TimeLineBar = styled.div`
   background-color: #f2f3f7;
-  
 `;
 
 const TimeLineWrapper = styled.div`
@@ -55,9 +53,4 @@ const TimeLineChild = styled.div`
   }
 `;
 
-export {
-  TimeLineWrapper,
-  ColumnContainer,
-  TimeLineBar,
-  TimeLineChild
-};
+export { TimeLineWrapper, ColumnContainer, TimeLineBar, TimeLineChild };

@@ -2,7 +2,6 @@ import { SideBar, RoundDivWrapper, GridContainer } from "./style";
 import Image from "../../public/Rohit.jpg";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
-// import MenuLinks from "./MenuLinks/MenuLinks";
 
 const SideDrawer = () => {
   const styledSkill = {
