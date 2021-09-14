@@ -17,14 +17,14 @@ const HeaderSection = styled.div`
   text-align: center;
   justify-content: center;
   margin-left: 24%;
-  .carousel__image {
+  .app-bg {
+    padding: 1rem;
+    height: 50vh;
+    text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${photographer});
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
+      url("Hero.jpg");
     background-size: cover;
-    position: relative;
+    background-position: center;
   }
 `;
 
