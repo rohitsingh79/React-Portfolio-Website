@@ -2,9 +2,12 @@ import React from "react";
 import SvgContainer from "./SvgContainer";
 import { GridContainer } from "./style";
 
-const GridBox = (props) => {
+const GridBox = ({ forwardedRef }) => {
   return (
-    <GridContainer bottomBorderColor={props.bottomBorderColor}>
+    <GridContainer
+      // bottomBorderColor={props.bottomBorderColor}
+      ref={forwardedRef}
+    >
       <div className="GridChild" style={{ borderBottom: "2px solid #2c98f0" }}>
         <SvgContainer color="#2c98f0" />
         <div>

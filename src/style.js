@@ -36,7 +36,7 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 408px 408px 408px;
   grid-gap: 30px;
-  margin-top: 10%;
+  margin-top: 300px;
   margin-left: 25%;
 
   .GridChild {
