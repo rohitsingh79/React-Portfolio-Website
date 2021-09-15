@@ -9,35 +9,22 @@ const DivWrapper = styled.div`
 `;
 
 const HeaderSection = styled.div`
-  width: 100%;
+  transform: translate(320px);
+  padding: 1rem;
   height: 500px;
-  /* background-color: #008b8b; */
-  position: relative;
   text-align: center;
-  justify-content: center;
-  margin-left: 24%;
-  .app-bg {
-    padding: 1rem;
-    height: 50vh;
-    text-align: center;
-
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.1) 1%,
-        rgba(0, 0, 0, 0.1)
-      ),
-      url("tamanna.jpg");
-    background-size: cover;
-    background-position: center;
-  }
+  background-image: url("tamanna.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%);
 `;
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 408px 408px 408px;
+  grid-template-columns: 411px 411px 411px;
   grid-gap: 30px;
   margin-top: 300px;
-  margin-left: 25%;
+  transform: translate(320px);
 
   .GridChild {
     background-color: #fff;
