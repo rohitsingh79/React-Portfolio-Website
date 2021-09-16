@@ -23,8 +23,9 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 411px 411px 411px;
   grid-gap: 30px;
-  margin-top: 300px;
-  transform: translate(320px);
+  padding-top: 3rem;
+  /* margin-top: 300px; */
+  /* transform: translate(320px); */
 
   .GridChild {
     background-color: #fff;
@@ -41,5 +42,18 @@ const SvgContainer = styled.div`
   left: 100px;
   text-align: center;
 `;
+const DescriptionContainer = styled.div`
+  transform: translate(320px);
+  width: 1320px;
+  height: 232px;
+  text-align: left;
+  padding: 30px 0;
+`;
 
-export { HeaderSection, DivWrapper, GridContainer, SvgContainer };
+export {
+  HeaderSection,
+  DivWrapper,
+  GridContainer,
+  SvgContainer,
+  DescriptionContainer
+};

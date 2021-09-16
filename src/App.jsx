@@ -4,6 +4,7 @@ import Header from "./Header";
 import TimeLine from "./TimeLine/TimeLine";
 import SideDrawer from "./SideBar/SideBar";
 import { DivWrapper } from "./style";
+import Description from "./Description";
 
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
@@ -40,6 +41,7 @@ export default function App() {
       <DivWrapper>
         <SideDrawer />
         <Header forwardedRef={IntroRef} />
+        <Description />
         <GridBox forwardedRef={GridBoxRef} />
         <TimeLine forwardedRef={TimeLineRef} />
       </DivWrapper>
