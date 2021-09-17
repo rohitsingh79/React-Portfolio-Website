@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
+import { InnerCircle, OuterCircle } from "./style";
 
 const CircleProgressBar = (props) => {
   const [per, setColor] = useState({});
@@ -21,23 +22,23 @@ const CircleProgressBar = (props) => {
     }
   `;
 
-  const InnerCircle = styled.circle`
-    fill: none;
-    stroke-width: 10;
-    stroke: #d8d8d8;
-    transform: translate(5px, 5px);
-    stroke-dasharray: 247;
-    stroke-linecap: round;
-  `;
-  const OuterCircle = styled.circle`
-    fill: none;
-    stroke-width: 10;
-    transform: translate(5px, 5px);
-    stroke-dasharray: 247;
-    stroke-linecap: round;
-    stroke: url(#linear);
-    animation: ${pulse} 2s linear forwards;
-  `;
+  // const InnerCircle = styled.circle`
+  //   fill: none;
+  //   stroke-width: 10;
+  //   stroke: #d8d8d8;
+  //   transform: translate(5px, 5px);
+  //   stroke-dasharray: 247;
+  //   stroke-linecap: round;
+  // `;
+  // const OuterCircle = styled.circle`
+  //   fill: none;
+  //   stroke-width: 10;
+  //   transform: translate(5px, 5px);
+  //   stroke-dasharray: 247;
+  //   stroke-linecap: round;
+  //   stroke: url(#linear);
+  //   animation: ${pulse} 2s linear forwards;
+  // `;
 
   const styledSvg = {
     height: "100px",
@@ -61,7 +62,7 @@ const CircleProgressBar = (props) => {
           </defs>
           <InnerCircle cx="40" cy="40" r="40"></InnerCircle>
 
-          <OuterCircle cx="40" cy="40" r="40"></OuterCircle>
+          <OuterCircle cx="40" cy="40" r="40" y={per}></OuterCircle>
         </svg>
         <div
           style={{
