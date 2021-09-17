@@ -41,7 +41,6 @@ export default function App() {
         const ele = ref.current;
         if (ele) {
           const { offsetBottom, offsetTop } = getDimensions(ele);
-          // console.log("scrollPosition", scrollPosition);
           return scrollPosition > offsetTop && scrollPosition < offsetBottom;
         }
       });
@@ -58,7 +57,13 @@ export default function App() {
   return (
     <div className="App">
       <DivWrapper>
-        <SideDrawer visibleSection={visibleSection} />
+        <SideDrawer
+          visibleSection={visibleSection}
+          IntroRef={IntroRef.current}
+          AboutRef={AboutRef.current}
+          ExpertiseRef={ExpertiseRef.current}
+          TimeLineRef={TimeLineRef.current}
+        />
         <Header forwardedRef={IntroRef} />
         <Description forwardedRef={AboutRef} />
         <GridBox forwardedRef={ExpertiseRef} />

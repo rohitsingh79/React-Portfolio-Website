@@ -4,6 +4,8 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
 
 const SideDrawer = (props) => {
+  const { IntroRef } = props;
+
   const styledSkill = {
     display: "flex",
     alignItems: "left",
@@ -16,6 +18,14 @@ const SideDrawer = (props) => {
   };
   const { visibleSection } = props;
   console.log(visibleSection);
+  const scrollTo = (ele) => {
+    console.log("inside scroll to");
+    console.log(ele);
+    ele.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  };
   return (
     <SideBar>
       <RoundDivWrapper>
@@ -59,7 +69,9 @@ const SideDrawer = (props) => {
               color:
                 visibleSection === "Introduction"
                   ? "#2c98f0"
-                  : "rgba(0, 0, 0, 0.7)"
+                  : "rgba(0, 0, 0, 0.7)",
+              "text-decoration":
+                visibleSection === "Introduction" ? "underline" : "none"
             }}
           >
             <a>INTRODUCTION</a>
@@ -68,7 +80,9 @@ const SideDrawer = (props) => {
             style={{
               "margin-bottom": "10px",
               color:
-                visibleSection === "About" ? "#2c98f0" : "rgba(0, 0, 0, 0.7)"
+                visibleSection === "About" ? "#2c98f0" : "rgba(0, 0, 0, 0.7)",
+              "text-decoration":
+                visibleSection === "About" ? "underline" : "none"
             }}
           >
             <a>ABOUT</a>
@@ -79,7 +93,9 @@ const SideDrawer = (props) => {
               color:
                 visibleSection === "Expertise"
                   ? "#2c98f0"
-                  : "rgba(0, 0, 0, 0.7)"
+                  : "rgba(0, 0, 0, 0.7)",
+              "text-decoration":
+                visibleSection === "Expertise" ? "underline" : "none"
             }}
           >
             <a>EXPERTISE</a>
@@ -88,7 +104,11 @@ const SideDrawer = (props) => {
             style={{
               "margin-bottom": "10px",
               color:
-                visibleSection === "TimeLine" ? "#2c98f0" : "rgba(0, 0, 0, 0.7)"
+                visibleSection === "TimeLine"
+                  ? "#2c98f0"
+                  : "rgba(0, 0, 0, 0.7)",
+              "text-decoration":
+                visibleSection === "TimeLine" ? "underline" : "none"
             }}
           >
             <a>TIMELINE</a>
