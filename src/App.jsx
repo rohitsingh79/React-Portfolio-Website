@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import GridBox from "./GridContainer";
 import Header from "./Header";
 import TimeLine from "./TimeLine/TimeLine";
@@ -19,30 +19,49 @@ const getDimensions = (ele) => {
 };
 
 export default function App() {
+  const [visibleSection, setVisibleSection] = useState();
+
   const IntroRef = useRef(null);
-  const GridBoxRef = useRef(null);
+  const AboutRef = useRef(null);
+  const ExpertiseRef = useRef(null);
   const TimeLineRef = useRef(null);
+
+  const sectionRefs = [
+    { section: "Introduction", ref: IntroRef },
+    { section: "About", ref: AboutRef },
+    { section: "Expertise", ref: ExpertiseRef },
+    { section: "TimeLine", ref: TimeLineRef }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const { height: headerHeight } = getDimensions(IntroRef.current);
-      const scrollPosition = window.scrollY + headerHeight + 200;
+      const scrollPosition = window.scrollY + 200;
 
-      const { offsetBottom, offsetTop } = getDimensions(GridBoxRef.current);
-      console.log("Offset Top", offsetTop);
-      console.log("Offest Bottom", offsetBottom);
-      console.log("scrollPosition", scrollPosition);
+      const selected = sectionRefs.find(({ section, ref }) => {
+        const ele = ref.current;
+        if (ele) {
+          const { offsetBottom, offsetTop } = getDimensions(ele);
+          // console.log("scrollPosition", scrollPosition);
+          return scrollPosition > offsetTop && scrollPosition < offsetBottom;
+        }
+      });
+      if (selected && selected.section !== visibleSection) {
+        setVisibleSection(selected.section);
+      }
     };
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <div className="App">
       <DivWrapper>
-        <SideDrawer />
+        <SideDrawer visibleSection={visibleSection} />
         <Header forwardedRef={IntroRef} />
-        <Description />
-        <GridBox forwardedRef={GridBoxRef} />
+        <Description forwardedRef={AboutRef} />
+        <GridBox forwardedRef={ExpertiseRef} />
         <TimeLine forwardedRef={TimeLineRef} />
       </DivWrapper>
     </div>

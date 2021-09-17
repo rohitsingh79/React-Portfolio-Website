@@ -1,18 +1,25 @@
+import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 const CircleProgressBar = (props) => {
-  let num = props.done;
-  let per = 244 - (244 * num) / 100;
+  const [per, setColor] = useState({});
+  let pulse;
+  useEffect(() => {
+    setTimeout(() => {
+      let num = props.done;
+      setColor(244 - (244 * num) / 100);
+    }, 500);
+  }, []);
 
-  const pulse = keyframes`
-  from {
-    stroke-dashoffset: 244;
-  }
+  pulse = keyframes`
+    from {
+      stroke-dashoffset: 244;
+    }
 
-  to {
-    stroke-dashoffset: ${per};
-  }
-`;
+    to {
+      stroke-dashoffset: ${per};
+    }
+  `;
 
   const InnerCircle = styled.circle`
     fill: none;

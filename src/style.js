@@ -11,7 +11,7 @@ const DivWrapper = styled.div`
 const HeaderSection = styled.div`
   transform: translate(320px);
   padding: 1rem;
-  height: 500px;
+  height: 800px;
   text-align: center;
   background-image: url("tamanna.jpg");
   background-size: cover;
@@ -48,7 +48,7 @@ const DescriptionContainer = styled.div`
   width: 1320px;
   height: 232px;
   text-align: left;
-  padding: 30px 0 80px;
+  padding: 80px 0 80px;
 `;
 
 export {

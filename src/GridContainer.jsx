@@ -5,6 +5,7 @@ import { GridContainer } from "./style";
 const GridBox = ({ forwardedRef }) => {
   return (
     <div
+      ref={forwardedRef}
       style={{
         padding: "2em 0px",
         transform: "translate(320px)"
@@ -37,8 +38,7 @@ const GridBox = ({ forwardedRef }) => {
       </div>
 
       <GridContainer
-        // bottomBorderColor={props.bottomBorderColor}
-        ref={forwardedRef}
+      // bottomBorderColor={props.bottomBorderColor}
       >
         <div
           className="GridChild"

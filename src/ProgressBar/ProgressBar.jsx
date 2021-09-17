@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import React, { useState } from "react";
 import { ProgressContainer, GridContainer } from "./style";
-import { transform } from "lodash";
 
 const ProgressBar = ({ done }) => {
   const [style, setStyle] = useState({});

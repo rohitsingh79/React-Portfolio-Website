@@ -1,8 +1,8 @@
 import React from "react";
 import { DescriptionContainer } from "./style";
-const Description = () => {
+const Description = ({ forwardedRef }) => {
   return (
-    <DescriptionContainer>
+    <DescriptionContainer ref={forwardedRef}>
       <div
         style={{
           color: "#999999",

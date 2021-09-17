@@ -3,7 +3,7 @@ import Image from "../../public/Rohit.jpg";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
 
-const SideDrawer = () => {
+const SideDrawer = (props) => {
   const styledSkill = {
     display: "flex",
     alignItems: "left",
@@ -14,6 +14,8 @@ const SideDrawer = () => {
     "font-family": "'Roboto', sans-serif",
     "font-size": "15px"
   };
+  const { visibleSection } = props;
+  console.log(visibleSection);
   return (
     <SideBar>
       <RoundDivWrapper>
@@ -54,7 +56,10 @@ const SideDrawer = () => {
           <li
             style={{
               "margin-bottom": "10px",
-              color: "rgba(0, 0, 0, 0.7)"
+              color:
+                visibleSection === "Introduction"
+                  ? "#2c98f0"
+                  : "rgba(0, 0, 0, 0.7)"
             }}
           >
             <a>INTRODUCTION</a>
@@ -62,7 +67,8 @@ const SideDrawer = () => {
           <li
             style={{
               "margin-bottom": "10px",
-              color: "rgba(0, 0, 0, 0.7)"
+              color:
+                visibleSection === "About" ? "#2c98f0" : "rgba(0, 0, 0, 0.7)"
             }}
           >
             <a>ABOUT</a>
@@ -70,7 +76,19 @@ const SideDrawer = () => {
           <li
             style={{
               "margin-bottom": "10px",
-              color: "rgba(0, 0, 0, 0.7)"
+              color:
+                visibleSection === "Expertise"
+                  ? "#2c98f0"
+                  : "rgba(0, 0, 0, 0.7)"
+            }}
+          >
+            <a>EXPERTISE</a>
+          </li>
+          <li
+            style={{
+              "margin-bottom": "10px",
+              color:
+                visibleSection === "TimeLine" ? "#2c98f0" : "rgba(0, 0, 0, 0.7)"
             }}
           >
             <a>TIMELINE</a>
