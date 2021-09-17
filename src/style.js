@@ -23,7 +23,7 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 411px 411px 411px;
   grid-gap: 30px;
-  padding-top: 3rem;
+  padding-top: 2rem;
   /* margin-top: 300px; */
   /* transform: translate(320px); */
 
@@ -34,6 +34,7 @@ const GridContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 80px;
   }
 `;
 
@@ -47,7 +48,7 @@ const DescriptionContainer = styled.div`
   width: 1320px;
   height: 232px;
   text-align: left;
-  padding: 30px 0;
+  padding: 30px 0 80px;
 `;
 
 export {

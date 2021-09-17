@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 const ColumnContainer = styled.div`
   display: grid;
-  margin-top: 100px;
   grid-template-columns: 6px 1224px;
   grid-gap: 40px;
   height: 620px;
   width: 1300px;
-  transform: translate(340px);
 `;
 
 const TimeLineBar = styled.div`

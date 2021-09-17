@@ -6,7 +6,7 @@ const GridBox = ({ forwardedRef }) => {
   return (
     <div
       style={{
-        paddingTop: "2rem",
+        padding: "2em 0px",
         transform: "translate(320px)"
       }}
     >
