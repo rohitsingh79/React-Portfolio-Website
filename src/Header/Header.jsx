@@ -1,23 +1,20 @@
 import React from "react";
 import { HeaderSection } from "./style";
-import logo from "../../public/dose.jpg";
-import Description from "./Description";
-const Header = () => {
+const Header = ({ forwardedRef }) => {
   return (
-    <>
-      <img
-        src={logo}
-        alt="Logo"
+    <HeaderSection ref={forwardedRef}>
+      <h1
         style={{
-          height: "500px",
-          width: "1320px",
-          position: "absolute",
-          display: "block",
-          "text-align": "center",
-          "margin-left": "25%"
+          color: "black",
+          textAlign: "left",
+          top: "30%",
+          left: "10%",
+          position: "absolute"
         }}
-      />
-    </>
+      >
+        Hello, Viewer !
+      </h1>
+    </HeaderSection>
   );
 };
 

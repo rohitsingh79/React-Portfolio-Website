@@ -1,35 +1,22 @@
 import styled from "styled-components";
 
 const HeaderSection = styled.div`
-  height: 500px;
-  position: relative;
-  .headerText {
-    text-align: center;
-    color: yellow;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: "40px";
-  }
-`;
-const Description = styled.div`
-  width: 100%;
-  height: 500px;
-  /* padding: 20px; */
-  /* background-color: #008b8b; */
-  position: relative;
+  transform: translate(320px);
+  padding: 1rem;
+  height: 870px;
   text-align: center;
-  justify-content: center;
-  margin-left: 20%;
-
-  .headerText {
-    text-align: center;
-    color: yellow;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: "40px";
-  }
+  background-image: url("tamanna.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%);
+  opacity: 0.8;
+`;
+const DescriptionContainer = styled.div`
+  transform: translate(320px);
+  width: 1320px;
+  height: 232px;
+  text-align: left;
+  padding: 80px 0 80px;
 `;
 
-export { HeaderSection };
+export { HeaderSection, DescriptionContainer };
