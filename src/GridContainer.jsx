@@ -1,8 +1,45 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import SvgContainer from "./SvgContainer";
 import { GridContainer } from "./style";
 
 const GridBox = ({ forwardedRef }) => {
+  const childRef1 = useRef(null);
+  const childRef2 = useRef(null);
+  const childRef3 = useRef(null);
+
+  // const sectionRefs = [
+  //   { section: "Introduction", ref: IntroRef },
+  //   { section: "About", ref: AboutRef },
+  //   { section: "Expertise", ref: ExpertiseRef },
+  //   { section: "TimeLine", ref: TimeLineRef }
+  // ];
+
+  // const options = {
+  //   root: null,
+  //   rootMargin: "0px",
+  //   threshold: 0.1
+  // };
+
+  // const callbackFunction = (entries) => {
+  //   // console.log(entries);
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       console.log(entry.isIntersecting);
+  //       // console.log(entry.target);
+  //     }
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   const appearOnScroll = new IntersectionObserver(callbackFunction, options);
+  //   const selected = sectionRefs.find(({ section, ref }) => {
+  //     const ele = ref.current;
+  //     if (ele) {
+  //       appearOnScroll.observe(ele);
+  //     }
+  //   });
+  // }, []);
+
   return (
     <div
       ref={forwardedRef}
@@ -37,10 +74,9 @@ const GridBox = ({ forwardedRef }) => {
         </h2>
       </div>
 
-      <GridContainer
-      // bottomBorderColor={props.bottomBorderColor}
-      >
+      <GridContainer>
         <div
+          ref={childRef1}
           className="GridChild"
           style={{ borderBottom: "2px solid #2c98f0" }}
         >
@@ -54,6 +90,7 @@ const GridBox = ({ forwardedRef }) => {
           </div>
         </div>
         <div
+          ref={childRef2}
           className="GridChild"
           style={{ borderBottom: "2px solid #f9bf3f" }}
         >
@@ -67,6 +104,7 @@ const GridBox = ({ forwardedRef }) => {
           </div>
         </div>
         <div
+          ref={childRef3}
           className="GridChild"
           style={{ borderBottom: "2px solid #2fa499" }}
         >

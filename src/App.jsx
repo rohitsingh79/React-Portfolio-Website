@@ -20,7 +20,6 @@ const getDimensions = (ele) => {
 
 export default function App() {
   const [visibleSection, setVisibleSection] = useState();
-
   const IntroRef = useRef(null);
   const AboutRef = useRef(null);
   const ExpertiseRef = useRef(null);
@@ -33,10 +32,25 @@ export default function App() {
     { section: "TimeLine", ref: TimeLineRef }
   ];
 
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1
+  };
+
+  const callbackFunction = (entries) => {
+    // console.log(entries);
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log(entry.isIntersecting);
+        // console.log(entry.target);
+      }
+    });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
-
       const selected = sectionRefs.find(({ section, ref }) => {
         const ele = ref.current;
         if (ele) {
@@ -52,6 +66,16 @@ export default function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, [visibleSection]);
+
+  useEffect(() => {
+    const appearOnScroll = new IntersectionObserver(callbackFunction, options);
+    const selected = sectionRefs.find(({ section, ref }) => {
+      const ele = ref.current;
+      if (ele) {
+        appearOnScroll.observe(ele);
+      }
+    });
   }, []);
 
   return (
@@ -64,6 +88,7 @@ export default function App() {
           ExpertiseRef={ExpertiseRef.current}
           TimeLineRef={TimeLineRef.current}
         />
+
         <Header forwardedRef={IntroRef} />
         <Description forwardedRef={AboutRef} />
         <GridBox forwardedRef={ExpertiseRef} />

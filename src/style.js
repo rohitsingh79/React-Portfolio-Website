@@ -11,12 +11,13 @@ const DivWrapper = styled.div`
 const HeaderSection = styled.div`
   transform: translate(320px);
   padding: 1rem;
-  height: 800px;
+  height: 870px;
   text-align: center;
   background-image: url("tamanna.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0px 0px 56px -8px rgb(0 0 0 / 17%);
+  opacity: 0.8;
 `;
 
 const GridContainer = styled.div`
