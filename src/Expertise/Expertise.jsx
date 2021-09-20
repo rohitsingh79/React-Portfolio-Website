@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import SvgContainer from "./SvgContainer";
 import { GridContainer } from "./style";
 
-const GridBox = ({ forwardedRef }) => {
+const Expertise = ({ forwardedRef }) => {
   const childRef1 = useRef(null);
   const childRef2 = useRef(null);
   const childRef3 = useRef(null);
@@ -122,4 +122,4 @@ const GridBox = ({ forwardedRef }) => {
   );
 };
 
-export default GridBox;
+export default Expertise;

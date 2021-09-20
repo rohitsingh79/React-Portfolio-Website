@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
-import GridBox from "./GridContainer";
-import Header from "./Header";
+import Expertise from "./Expertise/Expertise";
+import Header from "./Header/Header";
 import TimeLine from "./TimeLine/TimeLine";
 import SideDrawer from "./SideBar/SideBar";
 import { DivWrapper } from "./style";
-import Description from "./Description";
+import Description from "./Header/Description";
 
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
@@ -91,7 +91,7 @@ export default function App() {
 
         <Header forwardedRef={IntroRef} />
         <Description forwardedRef={AboutRef} />
-        <GridBox forwardedRef={ExpertiseRef} />
+        <Expertise forwardedRef={ExpertiseRef} />
         <TimeLine forwardedRef={TimeLineRef} />
       </DivWrapper>
     </div>
