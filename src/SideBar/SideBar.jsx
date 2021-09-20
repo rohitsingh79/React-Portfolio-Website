@@ -1,7 +1,7 @@
 import { SideBar, RoundDivWrapper, GridContainer } from "./style";
 import Image from "../../public/Rohit.jpg";
-import ProgressBar from "../ProgressBar/ProgressBar";
-import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
+import ProgressBar from "./ProgressBar/ProgressBar/ProgressBar";
+import CircleProgressBar from "./ProgressBar/CircleProgressBar/CircleProgressBar";
 
 const SideDrawer = (props) => {
   const { IntroRef } = props;
