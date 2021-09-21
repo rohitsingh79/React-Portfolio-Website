@@ -32,21 +32,21 @@ export default function App() {
     { section: "TimeLine", ref: TimeLineRef }
   ];
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.1
-  };
+  // const options = {
+  //   root: null,
+  //   rootMargin: "0px",
+  //   threshold: 0.1
+  // };
 
-  const callbackFunction = (entries) => {
-    // console.log(entries);
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        console.log(entry.isIntersecting);
-        // console.log(entry.target);
-      }
-    });
-  };
+  // const callbackFunction = (entries) => {
+  //   // console.log(entries);
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       console.log(entry.isIntersecting);
+  //       // console.log(entry.target);
+  //     }
+  //   });
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,15 +68,15 @@ export default function App() {
     };
   }, [visibleSection]);
 
-  useEffect(() => {
-    const appearOnScroll = new IntersectionObserver(callbackFunction, options);
-    const selected = sectionRefs.find(({ section, ref }) => {
-      const ele = ref.current;
-      if (ele) {
-        appearOnScroll.observe(ele);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   const appearOnScroll = new IntersectionObserver(callbackFunction, options);
+  //   const selected = sectionRefs.find(({ section, ref }) => {
+  //     const ele = ref.current;
+  //     if (ele) {
+  //       appearOnScroll.observe(ele);
+  //     }
+  //   });
+  // }, []);
 
   return (
     <div className="App">

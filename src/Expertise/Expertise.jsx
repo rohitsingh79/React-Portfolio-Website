@@ -7,38 +7,31 @@ const Expertise = ({ forwardedRef }) => {
   const childRef2 = useRef(null);
   const childRef3 = useRef(null);
 
-  // const sectionRefs = [
-  //   { section: "Introduction", ref: IntroRef },
-  //   { section: "About", ref: AboutRef },
-  //   { section: "Expertise", ref: ExpertiseRef },
-  //   { section: "TimeLine", ref: TimeLineRef }
-  // ];
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5
+  };
 
-  // const options = {
-  //   root: null,
-  //   rootMargin: "0px",
-  //   threshold: 0.1
-  // };
+  const callbackFunction = (entries) => {
+    console.log("inside the callback function of the Expertise.jsx");
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log(entry.target);
+        entry.target.style.cssText =
+          "opacity:1 ; transition: opacity 800ms linear; transform: translateY(10px);  transition:transform 500ms linear; transition-delay: 0.2s";
+      }
+    });
+  };
 
-  // const callbackFunction = (entries) => {
-  //   // console.log(entries);
-  //   entries.forEach((entry) => {
-  //     if (entry.isIntersecting) {
-  //       console.log(entry.isIntersecting);
-  //       // console.log(entry.target);
-  //     }
-  //   });
-  // };
+  useEffect(() => {
+    const appearOnScroll = new IntersectionObserver(callbackFunction, options);
 
-  // useEffect(() => {
-  //   const appearOnScroll = new IntersectionObserver(callbackFunction, options);
-  //   const selected = sectionRefs.find(({ section, ref }) => {
-  //     const ele = ref.current;
-  //     if (ele) {
-  //       appearOnScroll.observe(ele);
-  //     }
-  //   });
-  // }, []);
+    const ele = childRef1.current;
+    if (ele) {
+      appearOnScroll.observe(ele);
+    }
+  }, []);
 
   return (
     <div
@@ -78,7 +71,7 @@ const Expertise = ({ forwardedRef }) => {
         <div
           ref={childRef1}
           className="GridChild"
-          style={{ borderBottom: "2px solid #2c98f0" }}
+          style={{ borderBottom: "2px solid #2c98f0", opacity: "0" }}
         >
           <SvgContainer color="#2c98f0" />
           <div>

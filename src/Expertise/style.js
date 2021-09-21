@@ -16,6 +16,7 @@ const GridContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 80px;
+    transform: translateY(40px);
   }
 `;
 
