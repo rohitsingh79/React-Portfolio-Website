@@ -3,7 +3,7 @@ import styled from "styled-components";
 const HeaderSection = styled.div`
   transform: translate(320px);
   padding: 1rem;
-  height: 870px;
+  height: 800px;
   text-align: center;
   background-image: url("tamanna.jpg");
   background-size: cover;
@@ -12,7 +12,8 @@ const HeaderSection = styled.div`
   opacity: 0.8;
 `;
 const DescriptionContainer = styled.div`
-  transform: translate(320px);
+  opacity: 0;
+  transform: translate(300px);
   width: 1320px;
   height: 232px;
   text-align: left;

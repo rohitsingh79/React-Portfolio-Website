@@ -17,7 +17,6 @@ const SideDrawer = (props) => {
     "font-size": "15px"
   };
   const { visibleSection } = props;
-  console.log(visibleSection);
   const scrollTo = (ele) => {
     console.log("inside scroll to");
     console.log(ele);

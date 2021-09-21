@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { DescriptionContainer } from "./style";
 const Description = ({ forwardedRef }) => {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1
+  };
+
+  const callbackFunction = (entries) => {
+    console.log("callback function is called many time");
+    entries.forEach((entry) => {
+      console.log(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        entry.target.style.cssText =
+          "opacity:1 ; transition: opacity 800ms linear ; transform: translateX(330px);  transition:transform 800ms linear ";
+      }
+    });
+  };
+
+  useEffect(() => {
+    console.log("useEffect called one time only");
+    const appearOnScroll = new IntersectionObserver(callbackFunction, options);
+    const ele = forwardedRef.current;
+    if (ele) appearOnScroll.observe(ele);
+    return () => {
+      appearOnScroll.unobserve(ele);
+    };
+  }, []);
+
   return (
     <DescriptionContainer ref={forwardedRef}>
       <div
