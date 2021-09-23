@@ -23,8 +23,8 @@ const Expertise = ({ forwardedRef }) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const { transitionDelay } = entry.target.style;
-        entry.target.style.cssText = `opacity:1 ; transition: opacity 800ms linear;
-        transform: translateY(10px);  transition:transform 500ms linear; transition-delay: ${transitionDelay}`;
+        entry.target.style.cssText = `opacity:1 ; 
+        transform: translateY(10px);  transition:transform 600ms ease-in,opacity 400ms ease-in; transition-delay: ${transitionDelay}`;
       }
     });
   };
@@ -95,7 +95,7 @@ const Expertise = ({ forwardedRef }) => {
           className="GridChild"
           style={{
             borderBottom: "2px solid #f9bf3f",
-            transitionDelay: "1s",
+            transitionDelay: "0.8s",
             opacity: 0
           }}
         >
@@ -113,7 +113,7 @@ const Expertise = ({ forwardedRef }) => {
           className="GridChild"
           style={{
             borderBottom: "2px solid #2fa499",
-            transitionDelay: "2s",
+            transitionDelay: "1.0s",
             opacity: 0
           }}
         >
