@@ -10,27 +10,31 @@ const Expertise = ({ forwardedRef }) => {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5
+    threshold: 0.3
   };
 
+  const childRefs = [
+    { section: "child1", ref: childRef1 },
+    { section: "child2", ref: childRef2 },
+    { section: "child3", ref: childRef3 }
+  ];
+
   const callbackFunction = (entries) => {
-    console.log("inside the callback function of the Expertise.jsx");
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log(entry.target);
-        entry.target.style.cssText =
-          "opacity:1 ; transition: opacity 800ms linear; transform: translateY(10px);  transition:transform 500ms linear; transition-delay: 0.2s";
+        const { transitionDelay } = entry.target.style;
+        entry.target.style.cssText = `opacity:1 ; transition: opacity 800ms linear;
+        transform: translateY(10px);  transition:transform 500ms linear; transition-delay: ${transitionDelay}`;
       }
     });
   };
 
   useEffect(() => {
     const appearOnScroll = new IntersectionObserver(callbackFunction, options);
-
-    const ele = childRef1.current;
-    if (ele) {
-      appearOnScroll.observe(ele);
-    }
+    childRefs.forEach(({ ref }) => {
+      appearOnScroll.observe(ref.current);
+      return () => appearOnScroll.unobserve(ref.current);
+    });
   }, []);
 
   return (
@@ -71,7 +75,11 @@ const Expertise = ({ forwardedRef }) => {
         <div
           ref={childRef1}
           className="GridChild"
-          style={{ borderBottom: "2px solid #2c98f0", opacity: "0" }}
+          style={{
+            borderBottom: "2px solid #2c98f0",
+            transitionDelay: "0.4s",
+            opacity: 0
+          }}
         >
           <SvgContainer color="#2c98f0" />
           <div>
@@ -85,7 +93,11 @@ const Expertise = ({ forwardedRef }) => {
         <div
           ref={childRef2}
           className="GridChild"
-          style={{ borderBottom: "2px solid #f9bf3f" }}
+          style={{
+            borderBottom: "2px solid #f9bf3f",
+            transitionDelay: "1s",
+            opacity: 0
+          }}
         >
           <SvgContainer color="#f9bf3f" />
           <div>
@@ -99,7 +111,11 @@ const Expertise = ({ forwardedRef }) => {
         <div
           ref={childRef3}
           className="GridChild"
-          style={{ borderBottom: "2px solid #2fa499" }}
+          style={{
+            borderBottom: "2px solid #2fa499",
+            transitionDelay: "2s",
+            opacity: 0
+          }}
         >
           <SvgContainer color="#2fa499" />
           <div>
