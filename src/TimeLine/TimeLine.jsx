@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import SvgIcon from "./SvgIcon";
+import get from "lodash/get";
 
 import {
   TimeLineWrapper,
@@ -9,6 +10,43 @@ import {
 } from "./style";
 
 const TimeLine = ({ forwardedRef }) => {
+  const timeLine1 = useRef(null);
+  const timeLine2 = useRef(null);
+  const timeLine3 = useRef(null);
+
+  const timeLineRef = [
+    { section: "timeLine2", ref: timeLine1 },
+    { section: "timeLine2", ref: timeLine2 },
+    { section: "timeLine3", ref: timeLine3 }
+  ];
+
+  const callbackFunction = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log(entry.target);
+        let transitionDelay = entry.target.dataset.transitiondelay;
+        console.log(transitionDelay);
+        entry.target.style.cssText = `opacity:1 ;
+        transform: translateY(10px);  transition:transform 600ms ease-in,opacity 400ms ease-in; 
+        transition-delay: ${transitionDelay}`;
+      }
+    });
+  };
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3
+  };
+
+  useEffect(() => {
+    const appearOnScroll = new IntersectionObserver(callbackFunction, options);
+    timeLineRef.forEach(({ ref }) => {
+      appearOnScroll.observe(ref.current);
+      return () => appearOnScroll.unobserve(ref.current);
+    });
+  }, []);
+
   return (
     <div
       ref={forwardedRef}
@@ -45,7 +83,11 @@ const TimeLine = ({ forwardedRef }) => {
       <ColumnContainer>
         <TimeLineBar />
         <TimeLineWrapper>
-          <TimeLineChild backgroundColor={"#f9bf3f"}>
+          <TimeLineChild
+            ref={timeLine1}
+            data-transitiondelay="0.4s"
+            backgroundColor={"#f9bf3f"}
+          >
             <SvgIcon />
             <h3 style={{ paddingLeft: "20px" }}>
               Internship at Juniper 2019-present
@@ -62,7 +104,11 @@ const TimeLine = ({ forwardedRef }) => {
             </p>
           </TimeLineChild>
 
-          <TimeLineChild backgroundColor={"#a84cb8"}>
+          <TimeLineChild
+            ref={timeLine2}
+            backgroundColor={"#a84cb8"}
+            data-transitiondelay="0.8s"
+          >
             <SvgIcon />
             <h3 style={{ paddingLeft: "20px" }}>
               Internship at Juniper 2019-present
@@ -79,7 +125,11 @@ const TimeLine = ({ forwardedRef }) => {
             </p>
           </TimeLineChild>
 
-          <TimeLineChild backgroundColor={"#2fa499"}>
+          <TimeLineChild
+            ref={timeLine3}
+            backgroundColor={"#2fa499"}
+            data-transitionDelay="1.0s"
+          >
             <SvgIcon />
             <h3 style={{ paddingLeft: "20px" }}>
               Internship at Juniper 2019-present

@@ -24,6 +24,7 @@ const TimeLineChild = styled.div`
   background-color: #f2f3f7;
   position: relative;
   height: 200px;
+  opacity: 0;
 
   &::before {
     content: "";
