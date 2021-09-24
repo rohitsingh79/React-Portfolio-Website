@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import SvgIcon from "./SvgIcon";
-import get from "lodash/get";
 
 import {
   TimeLineWrapper,
@@ -23,9 +22,7 @@ const TimeLine = ({ forwardedRef }) => {
   const callbackFunction = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log(entry.target);
         let transitionDelay = entry.target.dataset.transitiondelay;
-        console.log(transitionDelay);
         entry.target.style.cssText = `opacity:1 ;
         transform: translateY(10px);  transition:transform 600ms ease-in,opacity 400ms ease-in; 
         transition-delay: ${transitionDelay}`;
