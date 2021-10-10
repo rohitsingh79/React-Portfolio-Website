@@ -4,8 +4,6 @@ import ProgressBar from "./ProgressBar/ProgressBar/ProgressBar";
 import CircleProgressBar from "./ProgressBar/CircleProgressBar/CircleProgressBar";
 
 const SideDrawer = (props) => {
-  const { IntroRef } = props;
-
   const styledSkill = {
     display: "flex",
     alignItems: "left",
@@ -125,20 +123,20 @@ const SideDrawer = (props) => {
           }}
         />
         <div style={styledSkill}>Html</div>
-        <ProgressBar done={"90"} />
+        <ProgressBar done={"80"} />
         <div style={styledSkill}>Css</div>
-        <ProgressBar done={"60"} />
+        <ProgressBar done={"85"} />
         <div style={styledSkill}>React</div>
-        <ProgressBar done={"50"} />
+        <ProgressBar done={"75"} />
         <div style={styledSkill}>Javascript</div>
-        <ProgressBar done={"90"} />
+        <ProgressBar done={"70"} />
         <hr style={{ margin: "20px 20px 10px 20px " }} />
       </div>
       <div style={{ position: "relative", top: "-50px" }}>
         <GridContainer>
-          <CircleProgressBar done={"80"} skill={"Communication"} />
+          <CircleProgressBar done={"85"} skill={"Communication"} />
           <CircleProgressBar done={"70"} skill={"Problen Solving"} />
-          <CircleProgressBar done={"90"} skill={"Team Work"} />
+          <CircleProgressBar done={"80"} skill={"Team Work"} />
           <CircleProgressBar done={"85"} skill={"Flexibility"} />
         </GridContainer>
       </div>
