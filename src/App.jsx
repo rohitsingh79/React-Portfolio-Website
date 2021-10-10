@@ -32,7 +32,6 @@ export default function App() {
     { section: "TimeLine", ref: TimeLineRef }
   ];
 
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -52,7 +51,6 @@ export default function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [visibleSection]);
-
 
   return (
     <div className="App">
