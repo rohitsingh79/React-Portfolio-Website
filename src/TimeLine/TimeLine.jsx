@@ -128,10 +128,36 @@ const TimeLine = ({ forwardedRef }) => {
             data-transitionDelay="1.0s"
           >
             <SvgIcon />
-            <h3 style={{ paddingLeft: "20px" }}>
-              Internship at Juniper 2019-present
-            </h3>
-            <p style={{ paddingLeft: "20px" }}>
+            <h2
+              style={{
+                paddingLeft: "20px",
+                fontSize: "20px",
+                "font-family": "'Roboto', sans-serif",
+                margin: "20px 0 30px 0"
+              }}
+            >
+              Primary and Higher Education
+              <span
+                style={{
+                  marginLeft: "20px",
+                  fontSize: "15px",
+                  color: "rgb(153, 153, 153)",
+                  "font-family": "Quicksand, Arial, sans-serif",
+                  opacity: 0.4
+                }}
+              >
+                2002-2014
+              </span>
+            </h2>
+            <p
+              style={{
+                paddingLeft: "20px",
+                color: "rgba(0, 0, 0, 0.7)",
+                "font-size": "15px",
+                "font-weight": "400",
+                "line-height": "1.8"
+              }}
+            >
               I recently have joined the Juniper Networs as a Software
               Developer-Intern in the DevOps team. My major part of the work has
               been into the field of creating sustainable and flexible CI/CD
