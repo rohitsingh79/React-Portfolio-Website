@@ -67,6 +67,7 @@ export default function App() {
         <Description forwardedRef={AboutRef} />
         <Expertise forwardedRef={ExpertiseRef} />
         <TimeLine forwardedRef={TimeLineRef} />
+        <h1>Added new line</h1>
       </DivWrapper>
     </div>
   );
