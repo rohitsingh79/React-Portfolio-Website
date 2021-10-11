@@ -4,11 +4,12 @@ const ColumnContainer = styled.div`
   display: grid;
   grid-template-columns: 6px 1224px;
   grid-gap: 40px;
-  height: 620px;
+  height: 650px;
   width: 1300px;
 `;
 
 const TimeLineBar = styled.div`
+  margin-top: 100%;
   background-color: #f2f3f7;
 `;
 
