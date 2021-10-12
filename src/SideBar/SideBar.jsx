@@ -2,6 +2,16 @@ import { SideBar, RoundDivWrapper, GridContainer } from "./style";
 import Image from "../../public/Rohit.jpg";
 import ProgressBar from "./ProgressBar/ProgressBar/ProgressBar";
 import CircleProgressBar from "./ProgressBar/CircleProgressBar/CircleProgressBar";
+import styled from "styled-components";
+
+const MenuList = styled.li`
+  margin-bottom: 15px;
+  color: ${(props) => props.color};
+  text-decoration: ${(props) => props.textColor};
+  & last-of-type {
+    margin-bottom: 0px;
+  }
+`;
 
 const SideDrawer = (props) => {
   const styledSkill = {
@@ -15,14 +25,14 @@ const SideDrawer = (props) => {
     "font-size": "15px"
   };
   const { visibleSection } = props;
-  const scrollTo = (ele) => {
-    console.log("inside scroll to");
-    console.log(ele);
-    ele.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  };
+  // const scrollTo = (ele) => {
+  //   console.log("inside scroll to");
+  //   console.log(ele);
+  //   ele.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start"
+  //   });
+  // };
   return (
     <SideBar>
       <RoundDivWrapper>
@@ -51,7 +61,7 @@ const SideDrawer = (props) => {
         style={{
           height: "150px",
           marginTop: "10%",
-          marginBottom: "5%"
+          marginBottom: "20%"
         }}
       >
         <ul
@@ -60,56 +70,38 @@ const SideDrawer = (props) => {
             paddingLeft: "0"
           }}
         >
-          <li
-            style={{
-              "margin-bottom": "10px",
-              color:
-                visibleSection === "Introduction"
-                  ? "#2c98f0"
-                  : "rgba(0, 0, 0, 0.7)",
-              "text-decoration":
-                visibleSection === "Introduction" ? "underline" : "none"
-            }}
+          <MenuList
+            color={
+              visibleSection === "Introduction"
+                ? "#2c98f0"
+                : "rgba(0, 0, 0, 0.7)"
+            }
+            textColor={visibleSection === "Introduction" ? "underline" : "none"}
           >
             <a>INTRODUCTION</a>
-          </li>
-          <li
-            style={{
-              "margin-bottom": "10px",
-              color:
-                visibleSection === "About" ? "#2c98f0" : "rgba(0, 0, 0, 0.7)",
-              "text-decoration":
-                visibleSection === "About" ? "underline" : "none"
-            }}
+          </MenuList>
+          <MenuList
+            color={visibleSection === "About" ? "#2c98f0" : "rgba(0,0,0,0.7)"}
+            textColor={visibleSection === "About" ? "underline" : "none"}
           >
             <a>ABOUT</a>
-          </li>
-          <li
-            style={{
-              "margin-bottom": "10px",
-              color:
-                visibleSection === "Expertise"
-                  ? "#2c98f0"
-                  : "rgba(0, 0, 0, 0.7)",
-              "text-decoration":
-                visibleSection === "Expertise" ? "underline" : "none"
-            }}
+          </MenuList>
+          <MenuList
+            color={
+              visibleSection === "Expertise" ? "#2c98f0" : "rgba(0,0,0,0.7)"
+            }
+            textColor={visibleSection === "Expertise" ? "underline" : "none"}
           >
             <a>EXPERTISE</a>
-          </li>
-          <li
-            style={{
-              "margin-bottom": "10px",
-              color:
-                visibleSection === "TimeLine"
-                  ? "#2c98f0"
-                  : "rgba(0, 0, 0, 0.7)",
-              "text-decoration":
-                visibleSection === "TimeLine" ? "underline" : "none"
-            }}
+          </MenuList>
+          <MenuList
+            color={
+              visibleSection === "TimeLine" ? "#2c98f0" : "rgba(0,0,0,0.7)"
+            }
+            textColor={visibleSection === "TimeLine" ? "underline" : "none"}
           >
             <a>TIMELINE</a>
-          </li>
+          </MenuList>
         </ul>
       </div>
 
