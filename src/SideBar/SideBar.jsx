@@ -4,13 +4,15 @@ import ProgressBar from "./ProgressBar/ProgressBar/ProgressBar";
 import CircleProgressBar from "./ProgressBar/CircleProgressBar/CircleProgressBar";
 import styled from "styled-components";
 
+const MenuListWrapper = styled.ul`
+  list-style-type: none;
+  padding-left: 0;
+`;
+
 const MenuList = styled.li`
   margin-bottom: 15px;
   color: ${(props) => props.color};
   text-decoration: ${(props) => props.textColor};
-  & last-of-type {
-    margin-bottom: 0px;
-  }
 `;
 
 const SideDrawer = (props) => {
@@ -64,12 +66,7 @@ const SideDrawer = (props) => {
           marginBottom: "20%"
         }}
       >
-        <ul
-          style={{
-            listStyleType: "none",
-            paddingLeft: "0"
-          }}
-        >
+        <MenuListWrapper>
           <MenuList
             color={
               visibleSection === "Introduction"
@@ -102,7 +99,7 @@ const SideDrawer = (props) => {
           >
             <a>TIMELINE</a>
           </MenuList>
-        </ul>
+        </MenuListWrapper>
       </div>
 
       {/* <MenuLinks>About Me</MenuLinks> */}
