@@ -27,8 +27,8 @@ const CircleProgressBar = (props) => {
         <svg style={styledSvg}>
           <defs>
             <linearGradient id={"linear"} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#f2709c" animation="1s ease 0.3s" />
-              <stop offset="100%" stopColor="#ff9472" />
+              <stop offset="0%" stopColor="#fec02f" animation="1s ease 0.2s" />
+              <stop offset="100%" stopColor="#fec02f" />
             </linearGradient>
           </defs>
           <InnerCircle cx="40" cy="40" r="40"></InnerCircle>
