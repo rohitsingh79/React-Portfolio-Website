@@ -9,8 +9,8 @@ const ProgressContainer = styled.div`
   width: 240px;
   margin-left: 10px;
   .progress-done {
-    background: linear-gradient(to left, #f2709c, #ff9472);
-    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+    background: linear-gradient(to left, #fec02f, #fec02f);
+    /* box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c; */
     border-radius: 20px;
     height: 100%;
     width: 0;
