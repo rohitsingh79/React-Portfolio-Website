@@ -129,7 +129,7 @@ const TimeLine = ({ forwardedRef }) => {
 
           <TimeLineChild
             ref={timeLine2}
-            backgroundColor={"#a84cb8"}
+            backgroundColor={"rgb(44, 152, 240)"}
             data-transitiondelay="0.8s"
           >
             <SvgIcon />

@@ -40,4 +40,20 @@ const DownloadButton = styled.button`
   top: 50%;
 `;
 
-export { HeaderSection, DescriptionContainer, CutOutDiv, DownloadButton };
+const SocialMediaWrapper = styled.div`
+  height: 15px;
+  width: 150px;
+  position: relative;
+  left: 40%;
+  top: 38%;
+  display: grid;
+  grid-template-columns: 30px 30px 30px 30px 30px;
+`;
+
+export {
+  HeaderSection,
+  DescriptionContainer,
+  CutOutDiv,
+  DownloadButton,
+  SocialMediaWrapper
+};
