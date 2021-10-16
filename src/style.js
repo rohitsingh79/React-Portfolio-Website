@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 const DivWrapper = styled.div`
-  width: 1320px;
-  height: 200%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: auto;
   text-align: center;
   background-color: #fff;
   position: absolute;
+  background: red;
 `;
 
 const HeaderSection = styled.div`

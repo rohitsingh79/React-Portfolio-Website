@@ -5,6 +5,16 @@ import TimeLine from "./TimeLine/TimeLine";
 import SideDrawer from "./SideBar/SideBar";
 import { DivWrapper } from "./style";
 import Description from "./Header/Description";
+import styled from "styled-components";
+
+const ContentDivWrapper = styled.div`
+  width: 1200px;
+  transform: translate(330px);
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    left: -300px;
+  }
+`;
 
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
@@ -33,6 +43,7 @@ export default function App() {
   ];
 
   useEffect(() => {
+    console.log("Iam called");
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
       const selected = sectionRefs.find(({ section, ref }) => {
@@ -50,7 +61,7 @@ export default function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [visibleSection]);
+  }, []);
 
   return (
     <div className="App">
@@ -62,11 +73,12 @@ export default function App() {
           ExpertiseRef={ExpertiseRef.current}
           TimeLineRef={TimeLineRef.current}
         />
-
-        <Header forwardedRef={IntroRef} />
-        <Description forwardedRef={AboutRef} />
-        <Expertise forwardedRef={ExpertiseRef} />
-        <TimeLine forwardedRef={TimeLineRef} />
+        <ContentDivWrapper>
+          <Header forwardedRef={IntroRef} />
+          <Description forwardedRef={AboutRef} />
+          <Expertise forwardedRef={ExpertiseRef} />
+          <TimeLine forwardedRef={TimeLineRef} />
+        </ContentDivWrapper>
       </DivWrapper>
     </div>
   );

@@ -51,16 +51,16 @@ const Expertise = ({ forwardedRef }) => {
     <div
       ref={forwardedRef}
       style={{
-        padding: "2em 0px",
-        transform: "translate(320px)"
+        padding: "2em 0px"
       }}
     >
       <div
         style={{
-          width: "667px",
+          width: "100%",
           height: "100px",
           "text-align": "left",
-          "letter-spacing": "5px"
+          "letter-spacing": "5px",
+          "word-wrap": "break-word"
         }}
       >
         <div style={{ color: "#999999", "margin-bottom": "15px" }}>

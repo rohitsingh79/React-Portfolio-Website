@@ -11,7 +11,7 @@ const Description = ({ forwardedRef }) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.style.cssText =
-          "opacity:1 ; transition: opacity 800ms linear ; transform: translateX(330px);  transition:transform 500ms linear;";
+          "opacity:1 ; transition: opacity 800ms linear ; transform: translateX(0px);  transition:transform 500ms linear;";
       }
     });
   };
