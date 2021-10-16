@@ -1,22 +1,29 @@
 import styled from "styled-components";
 
 const HeaderSection = styled.div`
-  transform: translate(320px);
   height: 600px;
   width: 100%;
   background: inherit;
   margin: 20px auto;
   background: green;
   position: relative;
+  @media only screen and (max-width: 600px) {
+    width: 400px;
+  }
 `;
 const DescriptionContainer = styled.div`
   opacity: 0;
-  transform: translate(300px);
   width: 1320px;
   height: 232px;
   text-align: left;
   padding: 80px 0 80px;
   margin-top: 250px;
+  transform: translate(-20px);
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    word-wrap: break-word;
+    height: 300px;
+  }
 `;
 const CutOutDiv = styled.div`
   height: 300px;

@@ -8,6 +8,9 @@ const SideBar = styled.div`
   position: fixed;
   height: 938px;
   overflow: scroll;
+  @media only screen and (max-width: 600px) {
+    left: -300px;
+  }
 `;
 
 const RoundDivWrapper = styled.div`

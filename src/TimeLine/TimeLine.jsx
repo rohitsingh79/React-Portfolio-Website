@@ -73,7 +73,7 @@ const TimeLine = ({ forwardedRef }) => {
       ref={forwardedRef}
       style={{
         padding: "2em 0px",
-        transform: "translate(340px)"
+        transform: "translate(20px)"
       }}
     >
       <div
