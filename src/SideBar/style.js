@@ -9,6 +9,7 @@ const SideBar = styled.div`
   height: 938px;
   overflow: scroll;
   @media only screen and (max-width: 600px) {
+    position: absolute;
     left: -300px;
   }
 `;

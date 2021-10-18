@@ -11,8 +11,10 @@ const ContentDivWrapper = styled.div`
   width: 1320px;
   transform: translate(330px);
   @media only screen and (max-width: 600px) {
-    position: relative;
-    left: -300px;
+    position: absolute;
+    left: -330px;
+    width: 100%;
+    height: auto;
   }
 `;
 

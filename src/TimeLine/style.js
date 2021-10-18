@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 const ColumnContainer = styled.div`
   display: grid;
-  grid-template-columns: 6px 1210px;
+  grid-template-columns: 6px auto;
   grid-gap: 40px;
-  height: 650px;
-  width: 1300px;
+  height: auto;
+  width: auto;
 `;
 
 const TimeLineBar = styled.div`
   margin-top: 100%;
   background-color: #f2f3f7;
+  height: 100%;
 `;
 
 const TimeLineWrapper = styled.div`
@@ -24,7 +25,7 @@ const TimeLineChild = styled.div`
   font-size: 15px;
   background-color: #f2f3f7;
   position: relative;
-  height: 200px;
+  height: auto;
   opacity: 0;
 
   &::before {

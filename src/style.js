@@ -4,7 +4,7 @@ const DivWrapper = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  height: auto;
+  height: 100%;
   text-align: center;
   background-color: #fff;
   position: absolute;
