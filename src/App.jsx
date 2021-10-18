@@ -8,7 +8,7 @@ import Description from "./Header/Description";
 import styled from "styled-components";
 
 const ContentDivWrapper = styled.div`
-  width: 1200px;
+  width: 1320px;
   transform: translate(330px);
   @media only screen and (max-width: 600px) {
     position: relative;
