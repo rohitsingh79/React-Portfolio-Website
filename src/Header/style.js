@@ -5,10 +5,9 @@ const HeaderSection = styled.div`
   width: 100%;
   background: inherit;
   margin: 20px auto;
-  background: green;
   position: relative;
   @media only screen and (max-width: 600px) {
-    width: 400px;
+    width: 100%;
   }
 `;
 const DescriptionContainer = styled.div`

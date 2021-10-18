@@ -8,7 +8,6 @@ const DivWrapper = styled.div`
   text-align: center;
   background-color: #fff;
   position: absolute;
-  background: red;
 `;
 
 const HeaderSection = styled.div`
