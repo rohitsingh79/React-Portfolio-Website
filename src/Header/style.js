@@ -4,10 +4,10 @@ const HeaderSection = styled.div`
   height: 600px;
   width: 100%;
   background: inherit;
-  margin: 20px auto;
   position: relative;
   @media only screen and (max-width: 600px) {
     width: 100%;
+    height: 400px;
   }
 `;
 const DescriptionContainer = styled.div`
@@ -32,6 +32,10 @@ const CutOutDiv = styled.div`
   position: absolute;
   top: 62%;
   left: 25%;
+  @media only screen and (max-width: 600px) {
+    width: 70%;
+    left: 15%;
+  }
 `;
 
 const DownloadButton = styled.button`
@@ -51,9 +55,34 @@ const SocialMediaWrapper = styled.div`
   width: 150px;
   position: relative;
   left: 40%;
-  top: 38%;
+  top: 40%;
   display: grid;
+  /* background: black; */
   grid-template-columns: 30px 30px 30px 30px 30px;
+  @media only screen and (max-width: 600px) {
+    left: 25%;
+  }
+`;
+
+const ImageWrapper = styled.img`
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: -25%;
+  left: 40%;
+  @media only screen and (max-width: 600px) {
+    left: 25%;
+  }
+`;
+
+const DetailsWrapper = styled.div`
+  height: auto;
+  width: auto;
+  /* background: yellow; */
+  position: relative;
+  top: 28%;
+  left: %;
 `;
 
 export {
@@ -61,5 +90,7 @@ export {
   DescriptionContainer,
   CutOutDiv,
   DownloadButton,
-  SocialMediaWrapper
+  SocialMediaWrapper,
+  ImageWrapper,
+  DetailsWrapper
 };

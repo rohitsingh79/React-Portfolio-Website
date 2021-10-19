@@ -6,7 +6,7 @@ import styled from "styled-components";
 const SvgIconContainer = styled.div`
   top: -8%;
   position: absolute;
-  left: 49%;
+  left: 53%;
 `;
 
 const Expertise = ({ forwardedRef }) => {
@@ -91,8 +91,8 @@ const Expertise = ({ forwardedRef }) => {
             opacity: 0
           }}
         >
-          {/* <SvgContainer color="#2c98f0" />
-          <SvgIconContainer>
+          <SvgContainer color="#2c98f0" />
+          {/* <SvgIconContainer>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"

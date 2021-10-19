@@ -3,7 +3,9 @@ import {
   HeaderSection,
   CutOutDiv,
   DownloadButton,
-  SocialMediaWrapper
+  SocialMediaWrapper,
+  ImageWrapper,
+  DetailsWrapper
 } from "./style";
 import Image from "../../public/Rohit.jpg";
 import tamanna from "../../public/tamanna.jpg";
@@ -20,18 +22,8 @@ const Header = ({ forwardedRef }) => {
           }}
         />
         <CutOutDiv>
-          <img
-            src={Image}
-            alt="logo"
-            style={{
-              height: "150px",
-              width: "150px",
-              borderRadius: "50%",
-              position: "absolute",
-              top: "-25%",
-              left: "40%"
-            }}
-          />
+          <ImageWrapper src={Image} alt="logo" />
+
           <div
             style={{
               position: "relative",

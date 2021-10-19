@@ -1,19 +1,24 @@
 import React from "react";
+import styled from "styled-components";
+
+const HexagonMainWrapper = styled.div`
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: -50%;
+  left: 40%;
+`;
+
+const SvgIconMainWrapper = styled.div`
+  position: relative;
+  top: -70%;
+`;
 
 const svgContainer = (props) => {
   const colorCode = props.color;
+  const svgIcon = "bi bi-lightbulb";
   return (
-    <div
-      style={{
-        padding: "20px",
-        width: "80px",
-        height: "80px",
-        marginBottom: "260px",
-        position: "absolute",
-        marginRight: "150x",
-        display: "block"
-      }}
-    >
+    <HexagonMainWrapper>
       <svg height="100" width="300">
         <polygon
           points="50 3,100 28,100 75, 50 100,3 75,3 25"
@@ -21,7 +26,19 @@ const svgContainer = (props) => {
           stroke-width="5"
         />
       </svg>
-    </div>
+      <SvgIconMainWrapper>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class={svgIcon}
+          viewBox="0 0 16 16"
+        >
+          <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z" />
+        </svg>
+      </SvgIconMainWrapper>
+    </HexagonMainWrapper>
   );
 };
 
