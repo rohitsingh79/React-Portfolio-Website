@@ -11,6 +11,13 @@ const SideBar = styled.div`
   @media only screen and (max-width: 600px) {
     position: absolute;
     left: -300px;
+    transition: left 0.5s;
+    z-index: 1;
+  }
+  &.active {
+    left: 0;
+    transition: left 0.5s;
+    z-index: 1;
   }
 `;
 
@@ -32,5 +39,39 @@ const GridContainer = styled.div`
   margin-left: 30px;
   margin-right: 30px;
 `;
+const HamburgerMenu = styled.div`
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0;
+  &.active {
+    :nth-child(1) {
+      background: black;
+      transform: rotate(-45deg) translate(-2px, 2px);
+    }
+    :nth-child(2) {
+      opacity: 0;
+    }
+    :nth-child(3) {
+      background: black;
+      transform: rotate(45deg) translate(-9px, -11px);
+    }
+  }
+`;
+const AbsoluteDiv = styled.div`
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+    position: absolute;
+    left: 20px;
+    transition: left 0.5s;
+    top: 20px;
+    z-index: 1;
+    &.active {
+      left: 320px;
+      transition: left 0.5s;
+    }
+  }
+`;
 
-export { SideBar, RoundDivWrapper, GridContainer };
+export { SideBar, RoundDivWrapper, GridContainer, HamburgerMenu, AbsoluteDiv };
