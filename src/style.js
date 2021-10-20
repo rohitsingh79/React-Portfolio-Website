@@ -34,5 +34,23 @@ const DescriptionContainer = styled.div`
   text-align: left;
   padding: 80px 0 80px;
 `;
+const ContentDivWrapper = styled.div`
+  width: 1320px;
+  transform: translate(330px);
+  @media only screen and (max-width: 600px) {
+    position: absolute;
+    left: -330px;
+    width: 100%;
+    height: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+`;
 
-export { HeaderSection, DivWrapper, SvgContainer, DescriptionContainer };
+export {
+  HeaderSection,
+  DivWrapper,
+  SvgContainer,
+  DescriptionContainer,
+  ContentDivWrapper
+};

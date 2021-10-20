@@ -21,7 +21,7 @@ const DescriptionContainer = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     word-wrap: break-word;
-    height: 300px;
+    height: auto;
   }
 `;
 const CutOutDiv = styled.div`
