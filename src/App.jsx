@@ -3,20 +3,8 @@ import Expertise from "./Expertise/Expertise";
 import Header from "./Header/Header";
 import TimeLine from "./TimeLine/TimeLine";
 import SideDrawer from "./SideBar/SideBar";
-import { DivWrapper } from "./style";
+import { DivWrapper, ContentDivWrapper } from "./style";
 import Description from "./Header/Description";
-import styled from "styled-components";
-
-const ContentDivWrapper = styled.div`
-  width: 1320px;
-  transform: translate(330px);
-  @media only screen and (max-width: 600px) {
-    position: absolute;
-    left: -330px;
-    width: 100%;
-    height: auto;
-  }
-`;
 
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
