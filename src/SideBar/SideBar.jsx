@@ -1,9 +1,10 @@
 import {
   SideBar,
-  RoundDivWrapper,
   GridContainer,
   HamburgerMenu,
-  AbsoluteDiv
+  AbsoluteDiv,
+  ImageWrapper,
+  MenuLinksWrapper
 } from "./style";
 import Image from "../../public/Rohit.jpg";
 import ProgressBar from "./ProgressBar/ProgressBar/ProgressBar";
@@ -35,10 +36,12 @@ const SideDrawer = (props) => {
   };
 
   const [state, setState] = useState("");
+  const [menuLink, setMenuLinks] = useState(true);
 
   const ToggleHamburgerMenu = () => {
     console.log("I clicked");
     setState(state === "active" ? "" : "active");
+    setMenuLinks(menuLink === true ? false : true);
     console.log(state);
   };
 
@@ -54,6 +57,7 @@ const SideDrawer = (props) => {
   useEffect(() => {
     const handleScroll = () => {
       setState("");
+      setMenuLinks(true);
     };
 
     if (state === "active") {
@@ -66,18 +70,7 @@ const SideDrawer = (props) => {
   return (
     <div>
       <SideBar className={`${state}`}>
-        <RoundDivWrapper>
-          <img
-            src={Image}
-            alt="Logo"
-            style={{
-              height: "150px",
-              width: "150px",
-              borderRadius: "50%"
-            }}
-          />
-        </RoundDivWrapper>
-
+        <ImageWrapper src={Image} alt="Logo" />
         <h1
           style={{
             fontWeight: "500",
@@ -88,78 +81,72 @@ const SideDrawer = (props) => {
         >
           Rohit Pratap Singh
         </h1>
-        <div
-          style={{
-            height: "150px",
-            marginTop: "10%",
-            marginBottom: "20%"
-          }}
-        >
-          <MenuListWrapper>
-            <MenuList
-              color={
-                visibleSection === "Introduction"
-                  ? "#2c98f0"
-                  : "rgba(0, 0, 0, 0.7)"
-              }
-              textColor={
-                visibleSection === "Introduction" ? "underline" : "none"
-              }
-            >
-              <a>INTRODUCTION</a>
-            </MenuList>
-            <MenuList
-              color={visibleSection === "About" ? "#2c98f0" : "rgba(0,0,0,0.7)"}
-              textColor={visibleSection === "About" ? "underline" : "none"}
-            >
-              <a>ABOUT</a>
-            </MenuList>
-            <MenuList
-              color={
-                visibleSection === "Expertise" ? "#2c98f0" : "rgba(0,0,0,0.7)"
-              }
-              textColor={visibleSection === "Expertise" ? "underline" : "none"}
-            >
-              <a>EXPERTISE</a>
-            </MenuList>
-            <MenuList
-              color={
-                visibleSection === "TimeLine" ? "#2c98f0" : "rgba(0,0,0,0.7)"
-              }
-              textColor={visibleSection === "TimeLine" ? "underline" : "none"}
-            >
-              <a>TIMELINE</a>
-            </MenuList>
-          </MenuListWrapper>
-        </div>
+        {menuLink && (
+          <MenuLinksWrapper>
+            <MenuListWrapper>
+              <MenuList
+                color={
+                  visibleSection === "Introduction"
+                    ? "#2c98f0"
+                    : "rgba(0, 0, 0, 0.7)"
+                }
+                textColor={
+                  visibleSection === "Introduction" ? "underline" : "none"
+                }
+              >
+                <a>INTRODUCTION</a>
+              </MenuList>
+              <MenuList
+                color={
+                  visibleSection === "About" ? "#2c98f0" : "rgba(0,0,0,0.7)"
+                }
+                textColor={visibleSection === "About" ? "underline" : "none"}
+              >
+                <a>ABOUT</a>
+              </MenuList>
+              <MenuList
+                color={
+                  visibleSection === "Expertise" ? "#2c98f0" : "rgba(0,0,0,0.7)"
+                }
+                textColor={
+                  visibleSection === "Expertise" ? "underline" : "none"
+                }
+              >
+                <a>EXPERTISE</a>
+              </MenuList>
+              <MenuList
+                color={
+                  visibleSection === "TimeLine" ? "#2c98f0" : "rgba(0,0,0,0.7)"
+                }
+                textColor={visibleSection === "TimeLine" ? "underline" : "none"}
+              >
+                <a>TIMELINE</a>
+              </MenuList>
+            </MenuListWrapper>
+          </MenuLinksWrapper>
+        )}
 
-        {/* <MenuLinks>About Me</MenuLinks> */}
-        <div style={{ position: "relative", top: "-60px" }}>
-          <hr
-            style={{
-              marginLeft: "20px",
-              marginRight: "20px",
-              marginBottom: "20px"
-            }}
-          />
-          <div style={styledSkill}>Html</div>
-          <ProgressBar done={"80"} />
-          <div style={styledSkill}>Css</div>
-          <ProgressBar done={"85"} />
-          <div style={styledSkill}>React</div>
-          <ProgressBar done={"75"} />
-          <div style={styledSkill}>Javascript</div>
-          <ProgressBar done={"70"} />
-          <hr style={{ margin: "20px 20px 10px 20px " }} />
-        </div>
-        <div style={{ position: "relative", top: "-50px" }}>
-          <GridContainer>
-            <CircleProgressBar done={"85"} skill={"Communication"} />
-            <CircleProgressBar done={"70"} skill={"Problen Solving"} />
-            <CircleProgressBar done={"80"} skill={"Team Work"} />
-            <CircleProgressBar done={"85"} skill={"Flexibility"} />
-          </GridContainer>
-        </div>
+        <hr
+          style={{
+            marginLeft: "20px",
+            marginRight: "20px"
+          }}
+        />
+        <div style={styledSkill}>Html</div>
+        <ProgressBar done={"80"} />
+        <div style={styledSkill}>Css</div>
+        <ProgressBar done={"85"} />
+        <div style={styledSkill}>React</div>
+        <ProgressBar done={"75"} />
+        <div style={styledSkill}>Javascript</div>
+        <ProgressBar done={"70"} />
+        <hr style={{ margin: "20px 20px 10px 20px " }} />
+        <GridContainer>
+          <CircleProgressBar done={"85"} skill={"Communication"} />
+          <CircleProgressBar done={"70"} skill={"Problen Solving"} />
+          <CircleProgressBar done={"80"} skill={"Team Work"} />
+          <CircleProgressBar done={"85"} skill={"Flexibility"} />
+        </GridContainer>
       </SideBar>
       <AbsoluteDiv onClick={ToggleHamburgerMenu} className={`${state}`}>
         <HamburgerMenu className={`${state}`} />

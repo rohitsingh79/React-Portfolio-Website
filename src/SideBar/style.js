@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const SideBar = styled.div`
   margin: 0;
@@ -20,17 +20,6 @@ const SideBar = styled.div`
     z-index: 1;
   }
 `;
-
-const RoundDivWrapper = styled.div`
-  width: 150px;
-  height: 150px;
-  background-color: inherit;
-  position: relative;
-  left: 20%;
-  top: 5px;
-  z-index: 1;
-`;
-
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 120px 120px;
@@ -74,4 +63,21 @@ const AbsoluteDiv = styled.div`
   }
 `;
 
-export { SideBar, RoundDivWrapper, GridContainer, HamburgerMenu, AbsoluteDiv };
+const ImageWrapper = styled.img`
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+`;
+
+const MenuLinksWrapper = styled.div`
+  min-height: 150px;
+`;
+
+export {
+  SideBar,
+  GridContainer,
+  HamburgerMenu,
+  AbsoluteDiv,
+  ImageWrapper,
+  MenuLinksWrapper
+};
