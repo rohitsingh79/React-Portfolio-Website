@@ -79,10 +79,10 @@ const ImageWrapper = styled.img`
 const DetailsWrapper = styled.div`
   height: auto;
   width: auto;
-  /* background: yellow; */
+  background: yellow;
   position: relative;
   top: 28%;
-  left: %;
+  left: 28%;
 `;
 
 export {

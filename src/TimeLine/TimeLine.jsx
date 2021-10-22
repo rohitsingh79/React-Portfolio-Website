@@ -72,6 +72,7 @@ const TimeLine = ({ forwardedRef }) => {
     <div
       ref={forwardedRef}
       style={{
+        marginTop: "100px",
         padding: "2em 20px",
         width: "auto"
       }}
