@@ -25,7 +25,7 @@ const TimeLineChild = styled.div`
   font-size: 15px;
   background-color: #f2f3f7;
   position: relative;
-  height: auto;
+  height: 200px;
   opacity: 0;
 
   &::before {

@@ -73,11 +73,16 @@ const MenuLinksWrapper = styled.div`
   min-height: 150px;
 `;
 
+const Links = styled.a`
+  cursor: pointer;
+`;
+
 export {
   SideBar,
   GridContainer,
   HamburgerMenu,
   AbsoluteDiv,
   ImageWrapper,
-  MenuLinksWrapper
+  MenuLinksWrapper,
+  Links
 };

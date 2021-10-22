@@ -33,7 +33,6 @@ export default function App() {
   ];
 
   useEffect(() => {
-    console.log("Iam called");
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
       const selected = sectionRefs.find(({ section, ref }) => {
@@ -58,10 +57,10 @@ export default function App() {
       <DivWrapper>
         <SideDrawer
           visibleSection={visibleSection}
-          IntroRef={IntroRef.current}
-          AboutRef={AboutRef.current}
-          ExpertiseRef={ExpertiseRef.current}
-          TimeLineRef={TimeLineRef.current}
+          IntroRef={IntroRef}
+          AboutRef={AboutRef}
+          ExpertiseRef={ExpertiseRef}
+          TimeLineRef={TimeLineRef}
         />
         <ContentDivWrapper>
           <Header forwardedRef={IntroRef} />

@@ -4,7 +4,8 @@ import {
   HamburgerMenu,
   AbsoluteDiv,
   ImageWrapper,
-  MenuLinksWrapper
+  MenuLinksWrapper,
+  Links
 } from "./style";
 import Image from "../../public/Rohit.jpg";
 import ProgressBar from "./ProgressBar/ProgressBar/ProgressBar";
@@ -45,16 +46,25 @@ const SideDrawer = (props) => {
     console.log(state);
   };
 
-  const { visibleSection } = props;
-  // const scrollTo = (ele) => {
-  //   console.log("inside scroll to");
-  //   console.log(ele);
-  //   ele.scrollIntoView({
-  //     behavior: "smooth",
-  //     block: "start"
-  //   });
-  // };
+  const {
+    visibleSection,
+    IntroRef,
+    AboutRef,
+    ExpertiseRef,
+    TimeLineRef
+  } = props;
+
+  const executeScroll = (ele) =>
+    ele.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest"
+    });
+
   useEffect(() => {
+    console.log(AboutRef);
+    console.log(AboutRef.current);
+
     const handleScroll = () => {
       setState("");
       setMenuLinks(true);
@@ -94,7 +104,9 @@ const SideDrawer = (props) => {
                   visibleSection === "Introduction" ? "underline" : "none"
                 }
               >
-                <a>INTRODUCTION</a>
+                <Links onClick={(event) => executeScroll(IntroRef.current)}>
+                  INTRODUCTION
+                </Links>
               </MenuList>
               <MenuList
                 color={
@@ -102,7 +114,9 @@ const SideDrawer = (props) => {
                 }
                 textColor={visibleSection === "About" ? "underline" : "none"}
               >
-                <a>ABOUT</a>
+                <Links onClick={() => executeScroll(AboutRef.current)}>
+                  ABOUT ME
+                </Links>
               </MenuList>
               <MenuList
                 color={
@@ -112,7 +126,9 @@ const SideDrawer = (props) => {
                   visibleSection === "Expertise" ? "underline" : "none"
                 }
               >
-                <a>EXPERTISE</a>
+                <Links onClick={() => executeScroll(ExpertiseRef.current)}>
+                  EXPERTISE
+                </Links>
               </MenuList>
               <MenuList
                 color={
@@ -120,7 +136,9 @@ const SideDrawer = (props) => {
                 }
                 textColor={visibleSection === "TimeLine" ? "underline" : "none"}
               >
-                <a>TIMELINE</a>
+                <Links onClick={() => executeScroll(TimeLineRef.current)}>
+                  TIMELINE
+                </Links>
               </MenuList>
             </MenuListWrapper>
           </MenuLinksWrapper>
