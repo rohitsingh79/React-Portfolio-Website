@@ -6,11 +6,10 @@ import SideDrawer from "./SideBar/SideBar";
 import { DivWrapper, ContentDivWrapper } from "./style";
 import Description from "./Header/Description";
 
-const getDimensions = (ele) => {
+const getDimensions = (ele, section) => {
   const { height } = ele.getBoundingClientRect();
   const offsetTop = ele.offsetTop;
   const offsetBottom = offsetTop + height;
-
   return {
     height,
     offsetTop,
@@ -35,12 +34,11 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
+      console.log("window.scrollY without addition:", scrollPosition);
       const selected = sectionRefs.find(({ section, ref }) => {
         const ele = ref.current;
-        if (ele) {
-          const { offsetBottom, offsetTop } = getDimensions(ele);
-          return scrollPosition > offsetTop && scrollPosition < offsetBottom;
-        }
+        const { offsetBottom, offsetTop } = getDimensions(ele, section);
+        return scrollPosition > offsetTop && scrollPosition < offsetBottom;
       });
       if (selected && selected.section !== visibleSection) {
         setVisibleSection(selected.section);
