@@ -8,12 +8,13 @@ const SideBar = styled.div`
   position: fixed;
   height: 938px;
   overflow: scroll;
-  @media only screen and (max-width: 600px) {
-    position: absolute;
+  @media (max-width: 600px), (max-width: 768px) {
+    position: fixed;
     left: -300px;
     transition: left 0.5s;
     z-index: 1;
   }
+
   &.active {
     left: 0;
     transition: left 0.5s;
@@ -49,7 +50,19 @@ const HamburgerMenu = styled.div`
 `;
 const AbsoluteDiv = styled.div`
   display: none;
-  @media only screen and (max-width: 600px) {
+  position: fixed;
+  @media (max-width: 600px), (max-width: 768px) {
+    display: block;
+    left: 20px;
+    transition: left 0.5s;
+    top: 20px;
+    z-index: 1;
+    &.active {
+      left: 320px;
+      transition: left 0.5s;
+    }
+  }
+  /* @media only screen and (max-width: 600px) {
     display: block;
     position: absolute;
     left: 20px;
@@ -60,7 +73,7 @@ const AbsoluteDiv = styled.div`
       left: 320px;
       transition: left 0.5s;
     }
-  }
+  } */
 `;
 
 const ImageWrapper = styled.img`

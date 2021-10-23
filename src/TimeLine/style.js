@@ -25,7 +25,7 @@ const TimeLineChild = styled.div`
   font-size: 15px;
   background-color: #f2f3f7;
   position: relative;
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 600px), (max-width: 768px) {
     height: auto;
   }
   height: 200px;

@@ -4,7 +4,8 @@ import {
   CutOutDiv,
   DownloadButton,
   SocialMediaWrapper,
-  ImageWrapper
+  ImageWrapper,
+  CutOutDiv1
 } from "./style";
 
 import Image from "../../public/Rohit.jpg";

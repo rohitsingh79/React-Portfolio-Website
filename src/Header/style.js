@@ -7,7 +7,7 @@ const HeaderSection = styled.div`
   position: relative;
   margin-bottom: 250px;
 
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 600px), (max-width: 768px) {
     width: 100%;
     height: 400px;
   }
@@ -19,7 +19,8 @@ const DescriptionContainer = styled.div`
   text-align: left;
   padding: 80px 0 80px;
   transform: translate(-20px);
-  @media only screen and (max-width: 600px) {
+
+  @media (max-width: 600px), (max-width: 768px) {
     width: 100%;
     word-wrap: break-word;
     height: auto;
@@ -36,6 +37,27 @@ const CutOutDiv = styled.div`
   @media only screen and (max-width: 600px) {
     width: 70%;
     left: 15%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 70%;
+    left: 16%;
+  }
+`;
+
+const CutOutDiv1 = styled.div`
+  height: 300px;
+  width: 50%;
+  background: white;
+  margin: 20px auto;
+  position: absolute;
+  top: 62%;
+  left: 25%;
+  @media only screen and (max-width: 600px) {
+    width: 70%;
+    left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -58,7 +80,6 @@ const SocialMediaWrapper = styled.div`
   left: 40%;
   top: 40%;
   display: grid;
-  /* background: black; */
   grid-template-columns: 30px 30px 30px 30px 30px;
   @media only screen and (max-width: 600px) {
     left: 25%;
@@ -72,8 +93,12 @@ const ImageWrapper = styled.img`
   position: absolute;
   top: -25%;
   left: 40%;
-  @media only screen and (max-width: 600px) {
-    left: 25%;
+  @media (min-width: 375px) and (max-width: 600px) {
+    left: 20%;
+  }
+
+  @media (min-width: 600px) and (max-width: 768px) {
+    left: 36%;
   }
 `;
 
@@ -93,5 +118,6 @@ export {
   DownloadButton,
   SocialMediaWrapper,
   ImageWrapper,
-  DetailsWrapper
+  DetailsWrapper,
+  CutOutDiv1
 };

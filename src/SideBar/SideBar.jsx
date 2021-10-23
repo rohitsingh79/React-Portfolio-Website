@@ -40,10 +40,8 @@ const SideDrawer = (props) => {
   const [menuLink, setMenuLinks] = useState(true);
 
   const ToggleHamburgerMenu = () => {
-    console.log("I clicked");
     setState(state === "active" ? "" : "active");
     setMenuLinks(menuLink === true ? false : true);
-    console.log(state);
   };
 
   const {
@@ -62,9 +60,6 @@ const SideDrawer = (props) => {
     });
 
   useEffect(() => {
-    console.log(AboutRef);
-    console.log(AboutRef.current);
-
     const handleScroll = () => {
       setState("");
       setMenuLinks(true);

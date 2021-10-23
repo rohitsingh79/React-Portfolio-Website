@@ -37,7 +37,7 @@ const DescriptionContainer = styled.div`
 const ContentDivWrapper = styled.div`
   width: 1320px;
   transform: translate(330px);
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 600px), (max-width: 768px) {
     position: absolute;
     left: -330px;
     width: 100%;
@@ -45,6 +45,14 @@ const ContentDivWrapper = styled.div`
     padding: 0 16px;
     box-sizing: border-box;
   }
+  /* @media only screen and (max-width: 600px) {
+    position: absolute;
+    left: -330px;
+    width: 100%;
+    height: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+  } */
 `;
 
 export {
