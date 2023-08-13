@@ -3,8 +3,9 @@ import Expertise from "./Expertise/Expertise";
 import Header from "./Header/Header";
 import TimeLine from "./TimeLine/TimeLine";
 import SideDrawer from "./SideBar/SideBar";
-import { DivWrapper, ContentDivWrapper } from "./style";
+import { ContentDivWrapper, MainWrapper } from "./style";
 import Description from "./Header/Description";
+import { createGlobalStyle } from 'styled-components'
 
 const getDimensions = (ele, section) => {
   const { height } = ele.getBoundingClientRect();
@@ -16,6 +17,14 @@ const getDimensions = (ele, section) => {
     offsetBottom
   };
 };
+
+const GlobalStyle = createGlobalStyle`
+body {
+  height:100vh;
+  width:100vw;
+  overflow-x:hidden;
+}
+`
 
 export default function App() {
   const [visibleSection, setVisibleSection] = useState();
@@ -51,22 +60,26 @@ export default function App() {
   }, []);
 
   return (
-    <div className="App">
-      <DivWrapper>
-        <SideDrawer
-          visibleSection={visibleSection}
-          IntroRef={IntroRef}
-          AboutRef={AboutRef}
-          ExpertiseRef={ExpertiseRef}
-          TimeLineRef={TimeLineRef}
-        />
-        <ContentDivWrapper>
-          <Header forwardedRef={IntroRef} />
-          <Description forwardedRef={AboutRef} />
-          <Expertise forwardedRef={ExpertiseRef} />
-          <TimeLine forwardedRef={TimeLineRef} />
-        </ContentDivWrapper>
-      </DivWrapper>
+    <div>
+      <GlobalStyle />
+      <MainWrapper>
+        <div id='side-wrapper'>
+          <SideDrawer
+            visibleSection={visibleSection}
+            IntroRef={IntroRef}
+            AboutRef={AboutRef}
+            ExpertiseRef={ExpertiseRef}
+            TimeLineRef={TimeLineRef}
+          />
+        </div>
+      
+      <ContentDivWrapper id='content-wrapper'>
+        <Header forwardedRef={IntroRef} />
+        <Description forwardedRef={AboutRef} />
+        <Expertise forwardedRef={ExpertiseRef} />
+        <TimeLine forwardedRef={TimeLineRef} />
+      </ContentDivWrapper>
+      </MainWrapper>
     </div>
   );
 }

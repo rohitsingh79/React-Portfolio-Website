@@ -7,7 +7,7 @@ import {
   MenuLinksWrapper,
   Links
 } from "./style";
-import Image from "../../public/Rohit.jpg";
+import Image from "../pratap.PNG";
 import ProgressBar from "./ProgressBar/ProgressBar/ProgressBar";
 import CircleProgressBar from "./ProgressBar/CircleProgressBar/CircleProgressBar";
 import styled from "styled-components";

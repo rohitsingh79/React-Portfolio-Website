@@ -8,20 +8,20 @@ import {
   CutOutDiv1
 } from "./style";
 
-import Image from "../../public/Rohit.jpg";
-import tamanna from "../../public/tamanna.jpg";
+import Image from "../pratap.PNG";
+import background from "./background.jpg";
 const Header = ({ forwardedRef }) => {
   return (
     <>
       <HeaderSection ref={forwardedRef}>
         <img
-          src={tamanna}
+          src={background}
           alt="logo"
           style={{
             height: "100%",
             width: "100%"
           }}
-        />
+        /> 
         <CutOutDiv>
           <ImageWrapper src={Image} alt="logo" />
 

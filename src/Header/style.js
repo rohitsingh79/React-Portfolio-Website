@@ -13,12 +13,10 @@ const HeaderSection = styled.div`
   }
 `;
 const DescriptionContainer = styled.div`
-  opacity: 0;
-  width: 1320px;
-  height: 232px;
+  width: 100%;
+  height: auto;
   text-align: left;
-  padding: 80px 0 80px;
-  transform: translate(-20px);
+  padding: 60px 0 80px;
 
   @media (max-width: 600px), (max-width: 768px) {
     width: 100%;

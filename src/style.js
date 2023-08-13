@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-const DivWrapper = styled.div`
+const MainWrapper = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  height: 100%;
+  height: auto;
   text-align: center;
-  background-color: #fff;
   position: absolute;
+  display:flex;
+  overflow-x:hidden;
 `;
 
 const HeaderSection = styled.div`
@@ -35,8 +36,10 @@ const DescriptionContainer = styled.div`
   padding: 80px 0 80px;
 `;
 const ContentDivWrapper = styled.div`
-  width: 1320px;
-  transform: translate(330px);
+  width: 100%;
+  height:auto;
+  margin-left:24%;
+
   @media (max-width: 600px), (max-width: 768px) {
     position: absolute;
     left: -330px;
@@ -57,8 +60,8 @@ const ContentDivWrapper = styled.div`
 
 export {
   HeaderSection,
-  DivWrapper,
   SvgContainer,
   DescriptionContainer,
-  ContentDivWrapper
+  ContentDivWrapper,
+  MainWrapper
 };

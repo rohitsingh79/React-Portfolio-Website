@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 411px 411px 411px;
-  grid-gap: 30px;
+  width:100%;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
   padding-top: 2rem;
 
   @media (max-width: 600px), (max-width: 768px) {
