@@ -8,7 +8,7 @@ import {
   CutOutDiv1
 } from "./style";
 
-import Image from "../pratap.PNG";
+import Image from "../passport.JPG";
 import background from "./background.jpg";
 const Header = ({ forwardedRef }) => {
   return (
