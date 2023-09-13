@@ -10,9 +10,8 @@ const Description = ({ forwardedRef }) => {
   const callbackFunction = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log('entry' , entry.isIntersecting);
-        // entry.target.style.cssText =
-        //   "opacity:1 ; transition: opacity 800ms linear ; transform: translateX(0px);  transition:transform 500ms linear;";
+        entry.target.style.cssText =
+          "opacity:1 ; transition: opacity 800ms linear ; transform: translateX(0px);  transition:transform 500ms linear;";
       }
     });
   };
@@ -58,10 +57,9 @@ const Description = ({ forwardedRef }) => {
           "font-size": "15px"
         }}
       >
-        I am a computer grad student from DAIICT-Gandhinagar with ICT as my
-        major. I love exploring new technologies and often amazed by the
-        progress we as a human species have mad so far in the recent years
-        (apart from the headphone-jack part!!)
+        Iam a software engineer at Lowe's (fortune 50 company) with my work revolving around
+        creating a shoppable experience for the lowe's customers online mainly by doing single page migration to  react,
+        new feature development on SBR (Shop by room ) , CDP and PD pages
       </p>
       <p
         style={{
@@ -72,9 +70,7 @@ const Description = ({ forwardedRef }) => {
           "font-size": "15px"
         }}
       >
-        I have started reflecting my ideas and thougths through the medium of
-        words recently so spelling and grammer mistaks are very often.You can
-        write me back if you spot any and don't want to live anymore :P
+        I am a computer grad student from CMR Insitute of Technology with subjects  DS , OOPS , OS , DBMS . I love exploring new technologies , grooming and mentoring juniors  solving problems, Competitive coding. 
       </p>
     </DescriptionContainer>
   );

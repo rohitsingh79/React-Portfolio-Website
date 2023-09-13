@@ -109,7 +109,7 @@ const Header = ({ forwardedRef }) => {
                 color: "rgb(44, 152, 240)"
               }}
             >
-              +91 9123456890
+              +91 9739787650
             </span>
           </div>
 
@@ -188,12 +188,12 @@ const Header = ({ forwardedRef }) => {
                 left: "1.2%"
               }}
             >
-              Front End Web Developer
+              Full stack Developer
             </span>
           </div>
 
           <i class="fab fa-dev"></i>
-          <a href={Image} download="myFile">
+          <a href='' download="myFile">
             <DownloadButton>
               Download CV
               <span

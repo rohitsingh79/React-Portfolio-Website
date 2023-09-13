@@ -103,9 +103,9 @@ const Expertise = ({ forwardedRef }) => {
             </SvgIconMainWrapper>
           </SvgContainer>
           <ContentWrapper>
-            <h3>Web Development</h3>
+            <h3>Front end Web Development</h3>
             <p>
-              I have experience building websites and chrome extentions using
+              I have experience building single page web application using
               JavaScript,React,HTML,CSS
             </p>
           </ContentWrapper>
@@ -133,10 +133,10 @@ const Expertise = ({ forwardedRef }) => {
             </SvgIconMainWrapper>
           </SvgContainer>
           <ContentWrapper>
-            <h3>Automation Testing</h3>
+            <h3>Back End Development</h3>
             <p>
-              I have experience building websites and chrome extentions using
-              JavaScipt
+              I have experience in creating REST API and routes
+              using tools such as express js , node js
             </p>
           </ContentWrapper>
         </GridChild>
@@ -163,10 +163,10 @@ const Expertise = ({ forwardedRef }) => {
             </SvgIconMainWrapper>
           </SvgContainer>
           <ContentWrapper>
-            <h3>Devops</h3>
+            <h3>Automation Testing</h3>
             <p>
-              I have experience building websites and chrome extentions using
-              JavaScipt
+              I have experience in writing end to end automation test cases 
+              using webdriver io , selenuim java and python
             </p>
           </ContentWrapper>
         </GridChild>
