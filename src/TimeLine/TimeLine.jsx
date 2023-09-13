@@ -117,14 +117,9 @@ const TimeLine = ({ forwardedRef }) => {
             </TimeLineHeading>
 
             <TimeLinePara>
-              I recently have joined the Juniper Networs as a Software
-              Developer-Intern in the DevOps team. My major part of the work has
-              been into the field of creating sustainable and flexible CI/CD
-              (Continuous Integration & Continuous Development) pipelines which
-              enables developers at Juniper to do rapid development. I am also
-              exploring the role of container technology like Docker and
-              container-orchrastation technologies like K8s, Swarm to create
-              industry standard production environments.
+              Working as a software engineer at Lowes (fortune 50 company) with roles and responsibilities
+              Revolving around front end development using react js , redux , javascript , html css  , node js
+              Creating a shoppable experience for the customers online  by designing new features on the  collection detail , product detail and helping lowes drive revenue from digital side. Also working with peers to drive solution to problems and also grooming the new joiners.
             </TimeLinePara>
           </TimeLineChild>
 
@@ -139,12 +134,7 @@ const TimeLine = ({ forwardedRef }) => {
               <TimeLineYear>2014-2018</TimeLineYear>
             </TimeLineHeading>
             <TimeLinePara>
-              I am pursuing my under-graduation studies with major in
-              I.C.T.(Information & Communication Technology). I have taken
-              courses like DSA, OOPs, Computer Networks, IOT, Web-Data
-              Management over the years and have better understanding of these
-              subjects.I have also been part of S.B.G.(Student Body Govenance)
-              scince my first year of college.
+              I completed my graduation studies in Information Science and technology and I have taken courses like DSA, OOPs, Computer Networks, system design.I was a student of CMR Institute of Technology Bengaluru and secured an overall percentage of 76.5% , also making me the department topper among boys and third overall.
             </TimeLinePara>
           </TimeLineChild>
           <TimeLineChild
@@ -158,12 +148,8 @@ const TimeLine = ({ forwardedRef }) => {
               <TimeLineYear>2002-2014</TimeLineYear>
             </TimeLineHeading>
             <TimeLinePara>
-              I have completed my higher secondary education with major subjects
-              as Physics,Chemistry & Maths with 91 merit. During my time at
-              school, I have developed interest in solving complex problems of
-              the fundamental physics which helped me to improve my
-              understanding of any problem and also my mathematical skills to
-              actually solve the problems
+              I have completed my higher secondary education with major subjects as Physics,Chemistry & Maths from Kendriya Vidyalaya no 2 Jalahalli East with 85 merit. I took computer science in my 11th and 12th ,where I got to study more about computer  and coding languages like c , c++.
+
             </TimeLinePara>
           </TimeLineChild>
         </TimeLineWrapper>
