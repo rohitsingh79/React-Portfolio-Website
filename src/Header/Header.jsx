@@ -192,7 +192,7 @@ const Header = ({ forwardedRef }) => {
           </div>
 
           <i class="fab fa-dev"></i>
-          <a href='' download="myFile">
+          <a href='http://localhost:3001/download-pdf' target="_blank" download>
             <DownloadButton>
               Download CV
               <span
