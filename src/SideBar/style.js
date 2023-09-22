@@ -9,22 +9,20 @@ const SideBar = styled.div`
   height: 100%;
   overflow: scroll;
   @media (max-width: 600px), (max-width: 768px) {
-    position: fixed;
-    left: -300px;
-    transition: left 0.5s;
-    z-index: 1;
-  }
-
-  &.active {
-    left: 0;
-    transition: left 0.5s;
-    z-index: 1;
+    &.inactive{
+      opacity:0;
+    }
+    &.active {
+      opacity:1;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
   }
 `;
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 120px 120px;
-  grid-template-rows: 120px 120px;
+  grid-template-rows: 130px 130px;
   grid-gap: 25px;
   margin-left: 30px;
   margin-right: 30px;
@@ -58,7 +56,7 @@ const AbsoluteDiv = styled.div`
     top: 20px;
     z-index: 1;
     &.active {
-      left: 320px;
+      left: 330px;
       transition: left 0.5s;
     }
   }
@@ -88,6 +86,8 @@ const MenuLinksWrapper = styled.div`
 
 const Links = styled.a`
   cursor: pointer;
+  color:inherit;
+  text-decoration:none;
 `;
 
 export {

@@ -43,7 +43,6 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
-      console.log("window.scrollY without addition:", scrollPosition);
       const selected = sectionRefs.find(({ section, ref }) => {
         const ele = ref.current;
         const { offsetBottom, offsetTop } = getDimensions(ele, section);
@@ -63,7 +62,7 @@ export default function App() {
     <div>
       <GlobalStyle />
       <MainWrapper>
-        <div id='side-wrapper'>
+        <div id='side-wrapper' className="sideWrapperx">
           <SideDrawer
             visibleSection={visibleSection}
             IntroRef={IntroRef}
@@ -74,7 +73,7 @@ export default function App() {
         </div>
       
       <ContentDivWrapper id='content-wrapper'>
-        <Header forwardedRef={IntroRef} />
+         <Header forwardedRef={IntroRef} /> 
         <Description forwardedRef={AboutRef} />
         <Expertise forwardedRef={ExpertiseRef} />
         <TimeLine forwardedRef={TimeLineRef} />

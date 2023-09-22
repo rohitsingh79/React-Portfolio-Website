@@ -9,6 +9,12 @@ const MainWrapper = styled.div`
   position: absolute;
   display:flex;
   overflow-x:hidden;
+  justify-content:space-between;
+  .sideWrapper{
+    @media(min-width:768px){
+      width:22%;
+    }
+  }
 `;
 
 const HeaderSection = styled.div`
@@ -36,26 +42,17 @@ const DescriptionContainer = styled.div`
   padding: 80px 0 80px;
 `;
 const ContentDivWrapper = styled.div`
-  width: 100%;
+  width: 78%;
   height:auto;
-  margin-left:24%;
-
-  @media (max-width: 600px), (max-width: 768px) {
-    position: absolute;
-    left: -330px;
-    width: 100%;
-    height: auto;
-    padding: 0 16px;
-    box-sizing: border-box;
+  padding-left:32px;
+  padding-right:8px;
+  
+  @media (max-width: 600px) , (max-width:768px){
+    width:100%;
+    margin-left:0;
+    padding :0 16px;
   }
-  /* @media only screen and (max-width: 600px) {
-    position: absolute;
-    left: -330px;
-    width: 100%;
-    height: auto;
-    padding: 0 16px;
-    box-sizing: border-box;
-  } */
+  
 `;
 
 export {

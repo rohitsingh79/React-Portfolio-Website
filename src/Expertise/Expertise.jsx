@@ -103,7 +103,7 @@ const Expertise = ({ forwardedRef }) => {
             </SvgIconMainWrapper>
           </SvgContainer>
           <ContentWrapper>
-            <h3>Front end Web Development</h3>
+            <h5 style = {{'font-family': 'Roboto, sans-serif' , 'color':'rgb(44, 152, 240)'}}>Front end Web Development</h5>
             <p>
               I have experience building single page web application using
               JavaScript,React,HTML,CSS
@@ -133,10 +133,10 @@ const Expertise = ({ forwardedRef }) => {
             </SvgIconMainWrapper>
           </SvgContainer>
           <ContentWrapper>
-            <h3>Back End Development</h3>
+          <h5 style = {{'font-family': 'Roboto, sans-serif','color':'rgb(249, 191, 63)'}}>Back End Development</h5>
             <p>
               I have experience in creating REST API and routes
-              using tools such as express js , node js
+              using run time env as node js and frameworks such as express js
             </p>
           </ContentWrapper>
         </GridChild>
@@ -148,7 +148,7 @@ const Expertise = ({ forwardedRef }) => {
             opacity: 0
           }}
         >
-          <SvgContainer color="#2c98f0">
+          <SvgContainer color="rgb(47, 164, 153)">
             <SvgIconMainWrapper>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ const Expertise = ({ forwardedRef }) => {
             </SvgIconMainWrapper>
           </SvgContainer>
           <ContentWrapper>
-            <h3>Automation Testing</h3>
+          <h5 style = {{'font-family': 'Roboto, sans-serif' , 'color':'rgb(47, 164, 153)'}}>Automation Testing</h5>
             <p>
               I have experience in writing end to end automation test cases 
               using webdriver io , selenuim java and python

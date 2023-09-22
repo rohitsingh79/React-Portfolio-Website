@@ -36,13 +36,15 @@ const SideDrawer = (props) => {
     "font-size": "15px"
   };
 
-  const [state, setState] = useState("");
+  const [state, setState] = useState("inactive");
   const [menuLink, setMenuLinks] = useState(true);
 
   const ToggleHamburgerMenu = () => {
-    setState(state === "active" ? "" : "active");
+    setState(state === "active" ? "inactive" : "active");
     setMenuLinks(menuLink === true ? false : true);
   };
+
+  console.log('state' , state);
 
   const {
     visibleSection,
@@ -51,6 +53,8 @@ const SideDrawer = (props) => {
     ExpertiseRef,
     TimeLineRef
   } = props;
+
+  
 
   const executeScroll = (ele) =>
     ele.scrollIntoView({
@@ -61,7 +65,7 @@ const SideDrawer = (props) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setState("");
+      setState("inactive");
       setMenuLinks(true);
     };
 
@@ -161,12 +165,13 @@ const SideDrawer = (props) => {
           <CircleProgressBar done={"85"} skill={"Flexibility"} />
         </GridContainer>
       </SideBar>
+
       <AbsoluteDiv onClick={ToggleHamburgerMenu} className={`${state}`}>
         <HamburgerMenu className={`${state}`} />
         <HamburgerMenu className={`${state}`} />
         <HamburgerMenu className={`${state}`} />
       </AbsoluteDiv>
-    </div>
+    </div >
   );
 };
 
